@@ -38,6 +38,10 @@ Product.init({
             key: 'category_id'
         }
     },
+    description:{
+        type: DataTypes.TEXT,
+        
+    }
 
 },
 {

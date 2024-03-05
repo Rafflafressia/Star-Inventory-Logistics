@@ -29,8 +29,4 @@ router.get('/manage-option/add-employee', async(req, res) => {
 
 
 
-
-
-
-
 module.exports = router;

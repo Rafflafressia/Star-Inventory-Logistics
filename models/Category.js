@@ -15,10 +15,6 @@ Category.init({
         allowNull: false
 
     },
-    description:{
-        type: DataTypes.TEXT,
-        
-    }
    
 },
 {

@@ -27,6 +27,10 @@ Product.init({
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    description:{
+        type: DataTypes.TEXT,
+        
+    },
     category_id: {
         type: DataTypes.INTEGER,
         references: {

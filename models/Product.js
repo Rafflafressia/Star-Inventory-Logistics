@@ -34,12 +34,6 @@ Product.init({
             key: 'category_id'
         }
     },
-    created_date:{
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW
-    },
-    
 
 },
 {

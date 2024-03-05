@@ -37,10 +37,6 @@ Product.init({
             model: 'category',
             key: 'category_id'
         }
-    },
-    description:{
-        type: DataTypes.TEXT,
-        
     }
 
 },

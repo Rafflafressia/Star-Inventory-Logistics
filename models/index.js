@@ -6,8 +6,8 @@ const Tag = require('./Tag.js');
 
 //TODO add delete here
 // one auth account only has one user info
-Auth.hasOne(UserInfo, {foreignKey: 'user_id',onDelete: "CASCASE"});
-UserInfo.belongsTo(Auth, {foreignKey: 'user_id',onDelete: "CASCASE"});
+Auth.hasOne(UserInfo, {foreignKey: 'user_id'});
+UserInfo.belongsTo(Auth, {foreignKey: 'user_id',onDelete: "CASCASE",onUpdate: "CASCADE"});
 
 //one category may inlcude many product
 Category.hasMany(Product, {foreignKey: 'category_id',onDelete: "SET NULL"});

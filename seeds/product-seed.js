@@ -8,7 +8,7 @@ const productData = [
     stock: 14,
     description: "Plain white T-Shirt, 100% cotton, machine washeable",
     category_id: 1
-  }
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);

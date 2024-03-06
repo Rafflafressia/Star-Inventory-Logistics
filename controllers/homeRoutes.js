@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     //TODO get category data here and render
-    res.render('homepage');
+    res.render('homePage');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -19,10 +19,12 @@ router.get('/login', async(req, res) => {
   res.render('login');
 })
 
-// sign up page
-router.get('/signup', async(req, res) => {
-  res.render('signup');
+
+// show product details
+router.get('/product-detail', async(req, res) => {
+  res.render('productDetail');
 })
+
 
 
 module.exports = router;

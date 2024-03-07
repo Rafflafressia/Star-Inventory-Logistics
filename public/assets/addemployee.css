@@ -1,0 +1,39 @@
+* {
+    font-size: 1.2rem;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+  }
+  
+  .input {
+    width: 15em;
+  }
+  
+  .back-g {
+    display: inline-block;
+  
+    background-color: rgba(116, 116, 116, 0.644);
+    border-radius: 20px;
+  }
+  .e-input {
+    border: none;
+    width: 80%;
+  
+    border-radius: 9px;
+  }
+  @media (max-width: 600px) {
+    * {
+      font-size: 1rem;
+    }
+    .e-input {
+      width: 100px;
+    }
+  }
+  

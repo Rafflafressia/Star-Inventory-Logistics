@@ -1,0 +1,24 @@
+* {
+    font-size: 1.2rem;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  
+  .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+  }
+  
+  .input {
+    width: 15em;
+    color: white;
+  }
+  .input2 {
+    width: 15em;
+  }
+  .input2::placeholder {
+    color: black;
+  }
+

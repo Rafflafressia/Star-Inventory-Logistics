@@ -59,6 +59,7 @@ router.post('/', async (req, res) => {
     }
 });
 
+// update details for a product
 router.put("/:id", async (req, res)=>{
     
     try {
@@ -76,6 +77,7 @@ router.put("/:id", async (req, res)=>{
     }
 });
 
+// delete a product 
 router.delete('/:id', async (req, res)=> {
     try {
 
@@ -87,7 +89,11 @@ router.delete('/:id', async (req, res)=> {
 
         }
 
-        await Product.destroy();
+        await Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
 
         res.status(200).json({message: 'Product has been deleted successfully'});
 

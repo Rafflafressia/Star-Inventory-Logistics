@@ -1,27 +1,27 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection.js');
-const bcrypt = require('bcrypt');
 
 
-class Auth extends Model {
-    checkPassword(loginPw) {
-        console.log(this.password)
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-};
 
-Auth.init({
+class Employee extends Model {};
+
+Employee.init({
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+        references: {
+            model: 'auth',
+            key: 'user_id'
+        }
     },
-    user_name:{
+    first_name:{
         type: DataTypes.STRING,
         allowNull: false
     },
-    password:{
+    last_name:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    position:{
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -31,7 +31,7 @@ Auth.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'auth',
+    modelName: 'employee',
 });
 
-module.exports = Auth;
+module.exports = Employee;

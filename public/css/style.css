@@ -1,0 +1,29 @@
+body {
+    scroll-behavior: auto;
+    overflow: scroll;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.sideBar {
+    position: relative; 
+    margin: 30px; 
+}
+
+.searchBar {
+    position:relative;
+    display:flex;
+    justify-content: center; 
+}
+
+#logo {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    right: 200px;
+    
+}

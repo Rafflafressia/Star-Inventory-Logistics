@@ -13,8 +13,8 @@ UserInfo.belongsTo(Auth, {foreignKey: 'user_id',onDelete: "CASCADE",onUpdate: "C
 Category.hasMany(Product, {foreignKey: 'category_id',onDelete: "SET NULL"});
 Product.belongsTo(Category, {foreignKey: 'category_id',onDelete: "SET NULL"});
 
-Product.hasMany(Tag, {foreignKey: 'product_id',onDelete: "SET NULL"});
-Tag.belongsTo(Product, {foreignKey: 'product_id',onDelete: "SET NULL"});
+// Product.hasMany(Tag, {foreignKey: 'product_id',onDelete: "SET NULL"});
+// Tag.belongsTo(Product, {foreignKey: 'product_id',onDelete: "SET NULL"});
 
 
 

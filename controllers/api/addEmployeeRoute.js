@@ -3,7 +3,6 @@ const { UserData, Employee } = require('../../models');
 const bcrypt = require('bcrypt');
 
 // create employee
-// TODO need to write a helper to hash the password here.
 router.post('/', async (req, res) => {
 
     /* The data pass in should look like this
@@ -18,7 +17,7 @@ router.post('/', async (req, res) => {
     */
 
     try {
-        console.log(req.body);
+        
         const newPassword = await bcrypt.hash(req.body.password, 10);
 
         const authData = await UserData.create({
@@ -29,10 +28,9 @@ router.post('/', async (req, res) => {
         });
 
 
-
         const userInfoData = await Employee.create({
           
-            user_id: authData.id,
+            user_id: authData.user_id,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             position: req.body.position

@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     //TODO get category data here and render
-    res.render('homePage');
+    res.render('homePage',{position: req.session.position});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -16,13 +16,17 @@ router.get('/', async (req, res) => {
 
 // login page
 router.get('/login', async(req, res) => {
-  
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
   res.render('login');
+
 })
 
 
 // show product details
-router.get('/product-detail', async(req, res) => {
+router.get('/product-detail', withAuth, async(req, res) => {
   res.render('productDetail');
 })
 

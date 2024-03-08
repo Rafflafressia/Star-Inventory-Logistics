@@ -8,12 +8,19 @@ router.get('/', async (req, res) => {
   try {
 
     const productData = await Product.findAll({
-      attributes:['product_name']
+      include:[{model:Category}]
     })
 
+    const categoryData = await Category.findAll({
+      include:[{model:Product}]
+    })
+
+   
+
     const products = productData.map((product) => product.get({plain: true}));
-    //TODO get produt data here and render
-    res.render('homepage', {products});
+    const categories = categoryData.map((category) => category.get({plain: true}));
+
+    res.render('homepage', {products,categories});
   } catch (err) {
     res.status(500).json(err);
   }

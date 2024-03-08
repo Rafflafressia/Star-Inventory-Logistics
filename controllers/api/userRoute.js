@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const {Auth} = require('../../models');
+const {UserData, Employee} = require('../../models');
 
 
 
 router.post('/login', async (req, res) => {
 
     try{
-        const userData = await Auth.findOne({
+        const userData = await UserData.findOne({
             where:{user_name: req.body.username}
         })
 
@@ -25,11 +25,16 @@ router.post('/login', async (req, res) => {
         
             return;
         }
+
+        const position = await Employee.findOne({
+            where: {user_id: userData.dataValues.user_id}
+        })
         
         /* save session info */
         req.session.save(() => {
             req.session.user_id = userData.dataValues.user_id;
             req.session.logged_in = true;
+            req.session.position = position.dataValues.position;
     
             res.json({ user: userData, message: 'You are now logged in!' });
         })

@@ -27,9 +27,6 @@ router.post('/', async (req, res) => {
 
         });
 
-        console.log(authData);
-
-
 
         const userInfoData = await Employee.create({
           

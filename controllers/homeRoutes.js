@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 
 // main page router, shows default category
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     //TODO get category data here and render
     res.render('homePage');
@@ -14,11 +14,11 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-// login page
-router.get('/login', async(req, res) => {
+// // login page
+// router.get('/login', async(req, res) => {
   
-  res.render('login');
-})
+//   res.render('login');
+// })
 
 
 // show product details

@@ -9,7 +9,7 @@ Employee.init({
     user_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'auth',
+            model: 'userdata',
             key: 'user_id'
         }
     },

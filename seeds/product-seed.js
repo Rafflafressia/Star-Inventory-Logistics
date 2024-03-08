@@ -120,7 +120,87 @@ const productData = [
     "stock": 8,
     "description": "Authentic bagpipes for Celtic tunes",
     "category_id": 5
+  },
+  {
+    product_name: 'Orange T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain orange T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
+  {
+    product_name: 'Blue T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain blue T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
+  {
+    product_name: 'Red T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain red T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
+  {
+    "product_name": "Clarinet",
+    "price": 129.99,
+    "cost": 70.00,
+    "stock": 15,
+    "description": "Smooth clarinet for woodwind players",
+    "category_id": 2
+  },
+  {
+    "product_name": "Xylophone",
+    "price": 99.99,
+    "cost": 50.00,
+    "stock": 20,
+    "description": "Colorful xylophone for percussionists",
+    "category_id": 3
+  },
+  {
+    "product_name": "Accordion",
+    "price": 299.99,
+    "cost": 150.00,
+    "stock": 5,
+    "description": "Traditional accordion for folk music",
+    "category_id": 4
+  },
+  {
+    "product_name": "Bagpipes",
+    "price": 199.99,
+    "cost": 100.00,
+    "stock": 8,
+    "description": "Authentic bagpipes for Celtic tunes",
+    "category_id": 5
   }
+  {
+    product_name: 'Orange T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain orange T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
+  {
+    product_name: 'Blue T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain blue T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
+  {
+    product_name: 'Red T-Shirt',
+    price: 14.99,
+    cost: 7.99,
+    stock: 14,
+    description: "Plain red T-Shirt, 100% cotton, machine washeable",
+    category_id: 1
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);

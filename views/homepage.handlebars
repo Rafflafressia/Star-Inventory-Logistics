@@ -1,7 +1,7 @@
-<section>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="mt-4 ms-4 p">
+{{!-- <section>
+    <div class="row mt-4 ">
+      <div class="col-md-4 ">
+        <div class="mt-4 ms-4">
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
@@ -76,60 +76,23 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body buttons">
                   <h6>product_name</h6>
-                  <h6 class="">product_name</h6>
+                  <h6>product_name</h6>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
 
       </div>
-      <div class="col-md-8 ">
+      <div class="col-md-8 productCard">
         <div class="">
           <div class="row mt-4 ms-5 ms-ms-0">
-            <div class="col-md-4 t ">
-
-              <h6>product_name</h6>
-              <div class="bg-secondary box "></div>
-            </div>
+            {{#each products as |product|}}
             <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box "></div>
+              <h6>{{product_name}}</h6>
+              <div class="bg-gray-400 box"></div>
             </div>
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box "></div>
-            </div>
-
-          </div>
-          <div class="row mt-4 ms-5 ms-ms-0">
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-          </div>
-          <div class="row  mt-4 ms-5 ms-ms-0">
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-            <div class="col-md-4">
-              <h6>product_name</h6>
-              <div class="bg-secondary box"></div>
-            </div>
-
+            {{/each}}
           </div>
         </div>
       </div>

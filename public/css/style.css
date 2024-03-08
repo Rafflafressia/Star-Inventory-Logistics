@@ -1,3 +1,5 @@
+/* Application body styling */
+
 body {
     scroll-behavior: auto;
     overflow: scroll;
@@ -9,21 +11,42 @@ header {
     justify-content: center;
 }
 
-.sideBar {
-    position: relative; 
-    margin: 30px; 
-}
-
-.searchBar {
-    position:relative;
-    display:flex;
-    justify-content: center; 
-}
-
-#logo {
-    position: relative;
-    z-index: 1;
-    width: 150px;
-    right: 200px;
-    
-}
+/* Product Card Styling */
+html {
+    overflow-x: hidden;
+  }
+  
+  .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+  }
+  
+  .input {
+    width: 15em;
+  }
+  
+  .box {
+    width: 17vw;
+    height: 150px;
+  }
+  .accordion-button {
+    background-color: rgb(216, 210, 210);
+    display: block;
+    padding: 30px;
+    border-bottom: 1px solid black;
+  }
+  .buttonl {
+    padding-bottom: 100px;
+  
+    border-bottom: none;
+    border-radius: 0px 0px 10px 10px;
+  }
+  
+  .buttons {
+    background-color: rgb(177, 173, 173);
+  }
+  .accordion.accordion-flush {
+    border-radius: 1.4em;
+    overflow: hidden;
+  }

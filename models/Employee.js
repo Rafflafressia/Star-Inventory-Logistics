@@ -3,20 +3,25 @@ const sequelize = require('../config/connection.js');
 
 
 
-class Auth extends Model {};
+class Employee extends Model {};
 
-Auth.init({
+Employee.init({
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
+        references: {
+            model: 'userdata',
+            key: 'user_id'
+        }
     },
-    user_name:{
+    first_name:{
         type: DataTypes.STRING,
         allowNull: false
     },
-    password:{
+    last_name:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    position:{
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -26,7 +31,7 @@ Auth.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'auth',
+    modelName: 'employee',
 });
 
-module.exports = Auth;
+module.exports = Employee;

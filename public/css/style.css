@@ -1,0 +1,17 @@
+/* Application body styling */
+
+body {
+    scroll-behavior: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+/* Product Card Styling */   
+  .box {
+    border: 2px solid rgb(221, 21, 21);
+    width: 17vw;
+    height: 150px;
+  }

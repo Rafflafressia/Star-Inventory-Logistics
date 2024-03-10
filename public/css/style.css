@@ -1,17 +1,267 @@
-/* Application body styling */
-
+/* main.handlebar body styling */
 body {
     scroll-behavior: auto;
 }
 
-header {
-    display: flex;
-    justify-content: center;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 10px;
+  display: inline;
+  align-content: center;
+  align-items: center;
+}
+
+section {
+  display:flex;
+}
+
+/* CSS for logo */
+.logo {
+  position: relative;
+  right: 275px;
+}
+
+/* header css */
+.slhead {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: #404040;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Div for Searchbox */
+.searchBox{
+  position: relative;
+  left: 50px;
+}
+/* Search Bar */
+.search{
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(119, 119, 119);
+  background:transparent;
+  text-align: center;
+  color: white;
+}
+
+/* Navigation Bar styling */
+.nav{
+  position: relative;
+  left: 375px;
 }
 
 /* Product Card Styling */   
-  .box {
-    border: 2px solid rgb(221, 21, 21);
-    width: 17vw;
-    height: 150px;
-  }
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: #404040;
+  position: relative;
+  top: 5px;
+  margin: auto;
+  width: 175px;
+  height: 185px;
+  border-radius: 10px;
+}
+
+.cardName {
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(249, 253, 255);
+  border-radius: 5px;
+}
+
+.productCard {
+  background-color: rgb(197, 209, 212);
+  border-radius: 25px;
+  width: 220px;
+  height: 275px;
+  margin: 10px;
+}
+
+.productCard:hover {
+  transition: 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+/* Side Bar Navigation Styling */
+.sideBar {
+  width: 300px; 
+  margin: 20px; 
+} 
+
+.form-control::placeholder {
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.accordion-button {
+  background-color: rgb(216, 210, 210);
+  display: block;
+  padding: 30px;
+  border-bottom: 1px solid black;
+}
+.buttonl {
+  padding-bottom: 100px;
+  border-bottom: none;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.buttons {
+  background-color: rgb(177, 173, 173);
+}
+.accordion.accordion-flush {
+  border-radius: 1.4em;
+  overflow: hidden;
+}
+
+/* Login Page CSS */
+.login-container {
+  max-width: 350px;
+  height:400px;
+  text-align: center;
+  margin:auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #b8d3f176;
+}
+.login-container h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+.form-control {
+  
+  border-radius: 8px;
+}
+.form-label{
+font: 1em sans-serif;
+}
+.btn-primary {
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  margin-top: 20px;
+  font:1em sans-serif;
+}
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.35rem rgba(0, 123, 255, 0.5);
+}
+.btn1 {
+  background-color: #ccc; /* Grey color */
+  color: #333;
+  border: none;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn1 {
+  background-color: #ccc; /* Grey color */
+  color: #333;
+  cursor: none;
+  border: none;
+}
+.submit-button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+}
+
+.svg-container {
+  margin: 10px 425px;
+  width: 200px;
+  height: 150px;
+}
+
+/* Product Description Page CSS */
+.accordion-button {
+  background-color: rgb(216, 210, 210);
+  display: block;
+  padding: 30px;
+  border-bottom: 1px solid black;
+}
+
+.buttonl {
+  padding-bottom: 100px;
+
+  border-bottom: none;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.buttons {
+  background-color: rgb(177, 173, 173);
+}
+
+.bg {
+  height: 200px;
+  width: 250px;
+  background-color: rgba(161, 158, 158, 0.849);
+}
+
+.price {
+  width: 120px;
+  height: 50px;
+  background-color: rgba(161, 158, 158, 0.849);
+}
+
+.descrip {
+  background-color: rgba(161, 158, 158, 0.849);
+  height: 200px;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+}
+.accordion.accordion-flush {
+  border-radius: 1.4em;
+  overflow: hidden;
+}
+
+.b_g {
+  background-color: rgba(161, 158, 158, 0.849);
+  border-radius: 20px;
+}
+.b_g input {
+  outline: none;
+}
+
+.input-1 {
+  height: 55px;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 5px rgb(87, 87, 87);
+}
+
+.ch-box {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0px 2px 5px rgb(88, 88, 88);
+}
+.pp {
+  padding-top: 150px;
+}
+

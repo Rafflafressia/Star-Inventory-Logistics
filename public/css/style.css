@@ -3,6 +3,11 @@ body {
     scroll-behavior: auto;
 }
 
+.hidden{
+  display: none;
+}
+
+
 ul {
   list-style-type: none;
   padding: 0;

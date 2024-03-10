@@ -1,7 +1,7 @@
-{{!-- <section>
-    <div class="row mt-4 ">
-      <div class="col-md-4 ">
-        <div class="mt-4 ms-4">
+ <section>
+    
+     
+        <div class="sideBar">
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
@@ -81,20 +81,17 @@
               </div>
             </div>
           </div>
-        </div> --}}
-
-      </div>
-      <div class="col-md-8 productCard">
-        <div class="">
-          <div class="row mt-4 ms-5 ms-ms-0">
-            {{#each products as |product|}}
-            <div class="col-md-4">
-              <h6>{{product_name}}</h6>
-              <div class="bg-gray-400 box"></div>
-            </div>
-            {{/each}}
-          </div>
         </div>
+
+
+
+  <div class="row mt-4 ms-5 ms-ms-0">
+    {{#each products as |product|}}
+      <div class="productCard">
+        <h6 class="cardName">{{product_name}}</h6>
+        <div class="box"></div>
       </div>
-    </div>
-  </section>
+    {{/each}}
+  </div>
+
+</section>

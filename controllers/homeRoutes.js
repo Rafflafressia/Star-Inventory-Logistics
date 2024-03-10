@@ -45,8 +45,15 @@ router.get('/product-detail', withAuth, async(req, res) => {
 
 
 // this is the page to update catalog and add employee for manager
-router.get('/manage-option', withAuth,async(req, res) => {
-  res.render('manageOption');
+router.get('/manage-option',async(req, res) => {
+  console.log({"position":req.session.position});
+  if(req.session.position ==="manager"){
+    res.status(200).render('manageOption');
+  }
+  else{
+    res.status(400).redirect('/');
+  }
+  
 });
 
 router.get('/manage-option/product-related', withAuth,async(req, res) => {

@@ -58,10 +58,10 @@ router.get('/manage-option/productRelated/add-product', async(req, res) => {
   res.render('addProduct');
   });
   
-  // page to search a product
-  router.get('/manage-option/productRelated/search-product', async(req, res) => {
+// page to search a product
+router.get('/manage-option/productRelated/search-product', async(req, res) => {
   res.render('searchProduct');
-  });
+});
 
 //page to add employee
 router.get('/manage-option/add-employee', async(req, res) => {

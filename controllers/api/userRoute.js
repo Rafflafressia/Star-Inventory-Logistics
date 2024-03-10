@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
           req.session.logged_in = true;
           req.session.position = position.dataValues.position;
   
-          res.json({ user: userData, message: 'You are now logged in!' });
+          res.status(200).json({ user: userData, message: 'You are now logged in!',"login status":req.session});
       })
   }
   catch(err){
@@ -60,4 +60,7 @@ router.post('/logout', (req, res) => {
   });
 
 
+
 module.exports = router;
+
+

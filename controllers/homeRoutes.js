@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { UserData, Category, Employee, Product } = require('../models');
-const withAuth = require('../utils/auth');
+const {withAuth, isManager} = require('../utils/auth');
 
 
-// main page router, shows default products
-router.get('/', async (req, res) => {
+// main page router, shows default category
+router.get('/', withAuth,async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
@@ -33,7 +33,7 @@ router.get('/login', async(req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login');
+  res.render('login',{"logged_in": req.session.logged_in});
 
 });
 
@@ -66,27 +66,54 @@ router.get('/productDetail/:product_id', async(req, res) => {
 
 
 // this is the page to update catalog and add employee for manager
-router.get('/manage-option', async(req, res) => {
-  res.render('manageOption');
+router.get('/manage-option', withAuth, (req, res) => {
+  if(req.session.position === "manager"){
+    res.render('manageOption');
+  }
+  else{
+    
+    res.redirect('/');
+  }
+  
+  
 });
 
-router.get('/manage-option/product-related', async(req, res) => {
-  res.render('productRelated');
+router.get('/manage-option/product-related', withAuth, async(req, res) => {
+  
+  if(req.session.position === "manager"){
+    res.render('productRelated');
+  }
+  else{
+    res.redirect('/');
+  }
 });
 
 //page to add product
-router.get('/manage-option/productRelated/add-product', async(req, res) => {
-  res.render('addProduct');
+router.get('/manage-option/productRelated/add-product', withAuth,async(req, res) => {
+  
+
+  if(req.session.position === "manager"){
+    res.render('addProduct');
+  }
+  else{
+    res.redirect('/');
+  }
   });
   
 // page to search a product
-router.get('/manage-option/productRelated/search-product', async(req, res) => {
+router.get('/manage-option/productRelated/search-product', withAuth,async(req, res) => {
   res.render('searchProduct');
 });
 
 //page to add employee
-router.get('/manage-option/add-employee', async(req, res) => {
-  res.render('addEmployee');
+router.get('/manage-option/add-employee', withAuth, async(req, res) => {
+  
+  if(req.session.position === "manager"){
+    res.render('addEmployee');
+  }
+  else{
+    res.redirect('/');
+  }
 });
 
 

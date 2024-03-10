@@ -1,120 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<section>
+{{> accordion}}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="public\css\productdetail.css">
-  <title>product-detail</title>
-</head>
-
-<body>
-  <nav class="navbar bg-dark navbar-dark">
-    <div class="container-fluid">
-      <div class="">
-        <a href="" class="navbar-brand"><img class="w-50 " src="public\assets\images\icon\logo.svg" alt="Logo"></a>
-      </div>
-      <div class=" my-auto mx-auto  ">
-        <form class="d-flex" role="search">
-          <button class="bg-dark border-0 " type="submit"><img class="bg-dark w-75 " src="public\assets\images\icon-s.svg"
-              alt=""></button>
-          <input
-            class="form-control me-2 bg-dark text-white  p-0 input border-top-0 border-start-0 border-end-0 rounded-0  "
-            type="search" placeholder="Search for product" aria-label="Search">
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <section>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="mt-4 ms-4 p">
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button buttonf collapsed text-danger fw-bold " type="button"
-                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                  aria-controls="flush-collapseOne" data-translate="category_name1">
-                  {{category_name1}}
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body buttons">
-                  <h6 data-translate="product_name1">{{product_name1}}</h6>
-                  <h6 class="" data-translate="product_name2">{{product_name2}}</h6>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" data-translate="category_name2">
-                  {{category_name2}}
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body buttons">
-                  <h6 data-translate="product_name3">{{product_name3}}</h6>
-                  <h6 class="" data-translate="product_name4">{{product_name4}}</h6>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" data-translate="category_name3">
-                  {{category_name3}}
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body buttons">
-                  <h6 data-translate="product_name5">{{product_name5}}</h6>
-                  <h6 class="" data-translate="product_name6">{{product_name6}}</h6>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour" data-translate="category_name4">
-                  {{category_name4}}
-                </button>
-              </h2>
-              <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body buttons">
-                  <h6 data-translate="product_name7">{{product_name7}}</h6>
-                  <h6 class="" data-translate="product_name8">{{product_name8}}</h6>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingfive">
-                <button class="accordion-button buttonl collapsed text-danger fw-bold " type="button"
-                  data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false"
-                  aria-controls="flush-collapsefive" data-translate="category_name5">
-                  {{category_name5}}
-                </button>
-              </h2>
-              <div id="flush-collapsefive" class="accordion-collapse collapse" aria-labelledby="flush-headingfive"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body buttons">
-                  <h6 data-translate="product_name9">{{product_name9}}</h6>
-                  <h6 class="" data-translate="product_name10">{{product_name10}}</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+{{!-- Product Description Page --}}
       <div class="col-md-6">
         <div class=" mt-5 ms-4 ms-md-2 mt-md-3">
           <div class="d-flex flex-column flex-md-row  ">
@@ -137,7 +24,7 @@
             <textarea name="" id="description" class="descrip w-100 "></textarea>
           </div>
           <div>
-            <button class="btn btn-primary mt-2 btn-lg " data-translate="Quote">{{Quote}}</button>
+            <button class="btn btn-primary mt-2 ">Quote</button>
           </div>
         </div>
       </div>
@@ -181,18 +68,6 @@
             <input type="text" class="input-1 border-0 ">
           </div>
         </div>
-      </div>3
-    </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="public\js\productdetail.js"></script>
-
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+      </div>
+      
+</section>

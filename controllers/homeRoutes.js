@@ -69,7 +69,14 @@ router.get('/manage-option/product-related', withAuth, async(req, res) => {
 
 //page to add product
 router.get('/manage-option/productRelated/add-product', withAuth,async(req, res) => {
-  res.render('addProduct');
+  
+
+  if(req.session.position === "manager"){
+    res.render('addProduct');
+  }
+  else{
+    res.redirect('/');
+  }
   });
   
 // page to search a product

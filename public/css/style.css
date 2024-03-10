@@ -8,6 +8,13 @@ body {
 }
 
 
+
+.logout,
+.settings:hover{
+  cursor: pointer;
+}
+
+
 ul {
   list-style-type: none;
   padding: 0;

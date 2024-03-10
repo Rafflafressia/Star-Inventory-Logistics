@@ -1,40 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var translations = {
-        "categoryname1": "Category 1",
-        "productname1": "Product 1",
-        "productname2": "Product 2",
-        "categoryname2": "Category 2",
-        "productname3": "Product 3",
-        "productname4": "Product 4",
-        "categoryname3": "Category 3",
-        "productname5": "Product 5",
-        "productname6": "Product 6",
-        "categoryname4": "Category 4",
-        "productname7": "Product 7",
-        "productname8": "Product 8",
-        "categoryname5": "Category 5",
-        "productname9": "Product 9",
-        "productname10": "Product 10",
-        "productname": "Product Name",
-        "productprice": "Product Price",
-        "productstock": "Product Stock",
-        "categoryname": "Category Name",
-        "productdescription": "Product Description",
-        "productimage": "Product Image",
-        "Addnewproduct": "Add New Product"
+$(document).ready(function () {
+    // Sample data
+    var data = {
+        categories: [
+            {
+                category: "Category 1",
+                products: ["Product 1", "Product 2"]
+            },
+            {
+                category: "Category 2",
+                products: ["Product 3", "Product 4"]
+            },
+            {
+                category: "Category 3",
+                products: ["Product 5", "Product 6"]
+            },
+            {
+                category: "Category 4",
+                products: ["Product 7", "Product 8"]
+            },
+            {
+                category: "Category 5",
+                products: ["Product 9", "Product 10"]
+            },
+        ],
+        // Product names for input placeholders
+        productname: "Product Name",
+        productprice: "Product Price",
+        productstock: "Product Stock",
+        productdescription: "Product Description",
+        productimage: "Product Image",
+        Addnewproduct: "Add New Product"
     };
-  
-    // Function to replace placeholders with translations
-    function translatePlaceholders() {
-        var placeholders = document.querySelectorAll('[data-translate]');
-        placeholders.forEach(function(placeholder) {
-            var key = placeholder.getAttribute('data-translate');
-            if (translations.hasOwnProperty(key)) {
-                placeholder.innerHTML = translations[key];
-            }
-        });
-    }
-  
-    // Call the function to translate placeholders
-    translatePlaceholders();
-  });
+
+    // Compile Handlebars template
+    var source = $("#accordion-template").html();
+    var template = Handlebars.compile(source);
+
+    // Append the compiled template to the accordion
+    $('#accordionFlushExample').append(template(data));
+
+    // Set placeholders for inputs
+    $('[data-translate="productname"]').text(data.productname);
+    $('[data-translate="productprice"]').text(data.productprice);
+    $('[data-translate="productstock"]').text(data.productstock);
+    $('[data-translate="productdescription"]').text(data.productdescription);
+    $('[data-translate="productimage"]').text(data.productimage);
+    $('[data-translate="Addnewproduct"]').text(data.Addnewproduct);
+});

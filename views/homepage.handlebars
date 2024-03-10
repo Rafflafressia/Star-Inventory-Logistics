@@ -1,18 +1,16 @@
 
- <section>
+<section>
 {{> accordion}}
 
 
 {{!-- Product Cards --}}
 <div class="row mt-4 ms-5 ms-ms-0">
   {{#each products as |product|}}
-    <div class="productCard">
-    <h6 class="cardName">{{product_name}}</h6>
-    <div class="box"></div>
+    <div class="productCard" data-id="{{product_id}}">
+      <h6 class="cardName" data-id="{{product_id}}">{{product.product_name}}</h6>
+      <div class="box" data-id="{{product_id}}"></div>
     </div>
   {{/each}}
 </div>
-
-
 
 </section>

@@ -25,12 +25,12 @@ router.get('/:id', async (req, res)=>{
         })
 
         if (!productData){
-            res.status(404).json({message: "Product could not be found"});
+            res.status(404).json({message: "Babobb: Product could not be found"});
         }
 
         res.status(200).json(productData);
     } catch(err) {
-        res.status(404).json({message:"This product does not exist"});
+        res.status(404).json({message:"Baboob:This product does not exist"});
     }
 });
 

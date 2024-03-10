@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { UserData, Category, Employee, Product } = require('../models');
-const withAuth = require('../utils/auth');
+const {withAuth, isManager} = require('../utils/auth');
 
 
 // main page router, shows default category
@@ -45,14 +45,15 @@ router.get('/product-detail', withAuth, async(req, res) => {
 
 
 // this is the page to update catalog and add employee for manager
-router.get('/manage-option',async(req, res) => {
-  console.log({"position":req.session.position});
-  if(req.session.position ==="manager"){
-    res.status(200).render('manageOption');
+router.get('/manage-option', withAuth, (req, res) => {
+  if(req.session.position === "manager"){
+    res.render('manageOption');
   }
   else{
-    res.status(400).redirect('/');
+    
+    res.redirect('/');
   }
+  
   
 });
 

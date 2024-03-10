@@ -5,7 +5,16 @@ const withAuth = (req, res, next) => {
     } else {
       next();
     }
-  };
+};
+
+const isManager = (req, res, next) => {
+  if (!req.session.position == "manager") {
+    res.redirect('/');
+  }else {
+    next();
+  }
+  
+}
 
   
-  module.exports = withAuth;
+  module.exports = {withAuth,isManager};

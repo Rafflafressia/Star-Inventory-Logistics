@@ -16,15 +16,9 @@ const logout_handler = async () => {
     }
   };
 
-  const setting_handler = async () => {
-      const response = await fetch('/api/manage-option', {
-          method:'GET'
-      })
-      
-      if(!response.ok){
-        alert("You have to be a manager")
-      }
-  }
+const setting_handler = () => {
+  document.location.replace('/manage-option');
+}
 
 document.querySelector('.settings').addEventListener('click', setting_handler);
 document.querySelector('.logout').addEventListener('click', logout_handler);

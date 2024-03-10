@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 
 // main page router, shows default category
-router.get('/', async (req, res) => {
+router.get('/', withAuth,async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
@@ -45,26 +45,26 @@ router.get('/product-detail', withAuth, async(req, res) => {
 
 
 // this is the page to update catalog and add employee for manager
-router.get('/manage-option', async(req, res) => {
+router.get('/manage-option', withAuth,async(req, res) => {
   res.render('manageOption');
 });
 
-router.get('/manage-option/product-related', async(req, res) => {
+router.get('/manage-option/product-related', withAuth,async(req, res) => {
   res.render('productRelated');
 });
 
 //page to add product
-router.get('/manage-option/productRelated/add-product', async(req, res) => {
+router.get('/manage-option/productRelated/add-product', withAuth,async(req, res) => {
   res.render('addProduct');
   });
   
 // page to search a product
-router.get('/manage-option/productRelated/search-product', async(req, res) => {
+router.get('/manage-option/productRelated/search-product', withAuth,async(req, res) => {
   res.render('searchProduct');
 });
 
 //page to add employee
-router.get('/manage-option/add-employee', async(req, res) => {
+router.get('/manage-option/add-employee', withAuth, async(req, res) => {
   res.render('addEmployee');
 });
 

@@ -59,6 +59,12 @@ section {
 }
 
 /* Product Card Styling */   
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .box {
   background-color: #404040;
   position: relative;

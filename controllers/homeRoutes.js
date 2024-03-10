@@ -21,10 +21,9 @@ router.get('/', async (req, res) => {
 
 
 // // login page
-// router.get('/login', async(req, res) => {
+ router.get('/login', async(req, res) => {
   
-//   res.render('login');
-// })
+  res.render('login'); })
 
 
 // show product details

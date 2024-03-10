@@ -39,8 +39,29 @@ router.get('/login', async(req, res) => {
 
 
 // show product details
-router.get('/product-detail', withAuth, async(req, res) => {
-  res.render('productDetail');
+// HTTP REQUEST TO GET PRODUCTDETAIL PAGE
+router.get('/productDetail/:product_id', async(req, res) => {
+
+  try {
+
+    const productData = await Product.findByPk(req.params.product_id, {
+      attributes: ['product_name', 'price', 'stock', 'description'],
+    });
+
+    if (!productData){
+      return res.status(404).json({message: "Baboob: Product could not be found"});
+    }
+
+  const productDetails = productData.get({plain: true});
+
+  res.render('productDetail', { productDetails });
+
+  } catch(err) {
+
+  res.status(404).json({message:"Maboob:This product does not exist"});
+
+  }
+
 });
 
 

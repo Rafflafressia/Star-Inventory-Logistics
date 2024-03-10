@@ -41,7 +41,6 @@ router.post('/', async (req, res) => {
         {
             product_name:
             price:
-            cost:
             stock:
             description:
             category_id:

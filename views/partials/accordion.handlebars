@@ -2,22 +2,22 @@
   <div class="accordion accordion-flush" id="accordionFlushExample">
     {{#each categories as |category|}}
     <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
+      <h2 class="accordion-header" id="{{category_id}}-{{category_name}}">
         <button
           class="accordion-button buttonf collapsed text-danger fw-bold"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne"
+          data-bs-target="#flush-{{category_id}}"
           aria-expanded="false"
-          aria-controls="flush-collapseOne"
+          aria-controls="flush-{{category_id}}"
         >
            {{category_name}}
         </button>
       </h2>
       <div
-        id="flush-collapseOne"
+        id="flush-{{category_id}}"
         class="accordion-collapse collapse"
-        aria-labelledby="flush-headingOne"
+        aria-labelledby="{{category_id}}-{{category_name}}"
         data-bs-parent="#accordionFlushExample"
       >
         <div class="accordion-body buttons">

@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
-      attributes:['category_name'],
       include: {model: Product, attributes: ['product_name']}
     });
 
@@ -49,7 +48,6 @@ router.get('/productDetail/:product_id', async(req, res) => {
     });
 
     const categoryData = await Category.findAll({
-      attributes:['category_name'],
       include: {model: Product, attributes: ['product_name']}
     });
 

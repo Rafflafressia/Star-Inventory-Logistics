@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const products = productData.map((product) => product.get({plain: true}));
     const categories = categoryData.map((category) => category.get({plain: true}));
 
-    res.render('homepage', {products,categories});
+    res.render('homepage', {products, categories});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -48,13 +48,19 @@ router.get('/productDetail/:product_id', async(req, res) => {
       attributes: ['product_name', 'price', 'stock', 'description'],
     });
 
+    const categoryData = await Category.findAll({
+      attributes:['category_name'],
+      include: {model: Product, attributes: ['product_name']}
+    });
+
     if (!productData){
       return res.status(404).json({message: "Baboob: Product could not be found"});
     }
 
   const productDetails = productData.get({plain: true});
+  const categories = categoryData.map((category) => category.get({plain: true}));
 
-  res.render('productDetail', { productDetails });
+  res.render('productDetail', { productDetails, categories });
 
   } catch(err) {
 

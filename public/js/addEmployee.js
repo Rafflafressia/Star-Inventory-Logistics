@@ -25,9 +25,9 @@ const add_new_employee_handler = async(event) => {
         })
 
         if (response.ok){
-           status_title.innerText = "Empolyee created Successfully";
-           message.innerText = "New employee has been added successfully";
-           pop_up.click();
+            status_title.innerText = "Empolyee created Successfully";
+            message.innerText = "New employee has been added successfully";
+            pop_up.click();
         
 
         }else{

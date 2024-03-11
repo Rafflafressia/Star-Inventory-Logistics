@@ -12,7 +12,7 @@ const login_form_handler = async(event)=>{
 
         if (response.ok){
            
-            document.location.replace('/');
+            document.location.assign('/');
 
         }else{
             alert("Failed to login");

@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const setting_btn = document.querySelector('.settings');
-    const logout_btn = document.querySelector('.logout');
-    setting_btn.classList.add('hidden')
-    logout_btn.classList.add('hidden')
-});
-
-
 const login_form_handler = async(event)=>{
     event.preventDefault();
     const user_name = document.querySelector('#username').value.trim();

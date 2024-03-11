@@ -4,7 +4,7 @@ const {withAuth, isManager} = require('../utils/auth');
 
 
 // main page router, shows default category
-router.get('/', withAuth,async (req, res) => {
+router.get('/', async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({

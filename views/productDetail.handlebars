@@ -2,61 +2,44 @@
 {{> accordion}}
 
 {{!-- Product Description Page --}}
-      <div class="col-md-6">
-        <div class=" mt-5 ms-4 ms-md-3">
-          <div class="d-flex ">
-            <div>
-              <h1>{{product.product_name}}</h1>
-            <div class="bg"></div>
-            </div>
-            
-            <div class=" ms-3 ">
-              <div class="pp">
-                <h2>price</h2>
-                <div class="price"></div>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <label class="fw-bold my-3" for="description">description</label><br>
-            <textarea name="" id="description" class="descrip w-100 "></textarea>
-          </div>
-          <div>
-            <button class="btn btn-primary mt-2 ">Quote</button>
-          </div>
-        </div>
-      </div>
+{{!-- This is the product detail page. It will display the product image, name, price, and description. --}}
+{{!-- The user will be able to request a quote for the product. --}}
+{{!-- The product detail page will be displayed when the user clicks on a product card. --}}
 
-      <div class="col-md-3">
-        <div class="b_g p-3 mt-5 d-md-inline-block ms-md-5 ms-4  ">
-          <div>
-            <label for="check"><h2>add_on</h2></label>  <br>
-            <input class="ch-box mt-4" type="checkbox" name="" id="check">
-            <input type="text" class="input-1 border-0 ">
-          </div>
-          
-          <div>
-            <label for="check"><h2>add_on</h2></label>  <br>
-            <input class="ch-box mt-4" type="checkbox" name="" id="check">
-            <input type="text" class="input-1 border-0 ">
-          </div>
-          <div>
-            <label for="check"><h2>add_on</h2></label>  <br>
-            <input class="ch-box mt-4" type="checkbox" name="" id="check">
-            <input type="text" class="input-1 border-0 ">
-          </div>
-          <div>
-            <label for="check"><h2>add_on</h2></label>  <br>
-            <input class="ch-box mt-4" type="checkbox" name="" id="check">
-            <input type="text" class="input-1 border-0 ">
-          </div>
-          <div>
-            <label for="check"><h2>add_on</h2></label>  <br>
-            <input class="ch-box mt-4" type="checkbox" name="" id="check">
-            <input type="text" class="input-1 border-0 ">
+<div class="productDetailContainer">
+
+  <div class="col-md-6">
+    <img src="{{productDetails.image}}" alt="{{productDetails.product_name}}" class="img-fluid">
+  </div>
+  <div class="col-md-6">
+    <div class=" mt-5 ms-4 ms-md-3">
+      <div class="d-flex ">
+        <div>
+          <h1>{{productDetails.product_name}}</h1>
+          <div class="bg"></div>
+        </div>
+        
+        <div class=" ms-3 ">
+          <div class="pp">
+            <h2>price</h2>
+            <div class="price">{{productDetails.price}}</div>
           </div>
         </div>
       </div>
       
+      <div>
+        <label class="fw-bold my-3" for="description">description</label><br>
+        <textarea name="" id="description" class="descrip w-100 ">{{productDetails.description}}</textarea>
+      </div>
+      <div>
+        <button class="btn btn-primary mt-2 ">Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
+
+<script src="/js/product.js"></script>
+{{! Path: public/js/productDetail.js
+Compare this snippet from public/js/product.js:}}

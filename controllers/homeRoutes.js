@@ -39,7 +39,7 @@ router.get('/login', async(req, res) => {
 
 // show product details
 // HTTP REQUEST TO GET PRODUCTDETAIL PAGE
-router.get('/productDetail/:product_id', async(req, res) => {
+router.get('/productDetail-:product_id', async(req, res) => {
 
   try {
 
@@ -57,7 +57,6 @@ router.get('/productDetail/:product_id', async(req, res) => {
 
   const productDetails = productData.get({plain: true});
   const categories = categoryData.map((category) => category.get({plain: true}));
-  console.log(categories);
 
   res.render('productDetail', { productDetails, categories });
 

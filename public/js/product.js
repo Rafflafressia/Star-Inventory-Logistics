@@ -10,7 +10,7 @@ const productDescription = async (event) => {
     
     console.log(productId);
 
-    document.location.assign(`productDetail/${productId}`);
+    document.location.assign(`productDetail-${productId}`);
 };
 
 const productCard = document.querySelectorAll(".productCard");

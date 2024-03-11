@@ -39,7 +39,7 @@ router.get('/login', async(req, res) => {
 
 // show product details
 // HTTP REQUEST TO GET PRODUCTDETAIL PAGE
-router.get('/productDetail-:product_id', async(req, res) => {
+router.get('/productDetail-:product_id', withAuth,async(req, res) => {
 
   try {
 

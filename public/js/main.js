@@ -14,7 +14,25 @@ const logout_handler = async () => {
     } else {
       alert(response.statusText);
     }
-  };
+};
+
+const search_handler = async () => {
+  const response = await fetch('/api/products/search', {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    // If successfully logged out, redirect to the login page
+
+    document.location.redirect('/');
+
+  } else {
+    alert(response.statusText);
+  }
+}
+
+
 
 const setting_handler = () => {
   document.location.assign('/manage-option');

@@ -78,7 +78,7 @@ router.get('/manage-option', withAuth, (req, res) => {
   
 });
 
-router.get('/manage-option/product-related', withAuth, async(req, res) => {
+router.get('/product-related', withAuth, async(req, res) => {
   
   if(req.session.position === "manager"){
     res.render('productRelated');
@@ -89,7 +89,7 @@ router.get('/manage-option/product-related', withAuth, async(req, res) => {
 });
 
 //page to add product
-router.get('/manage-option/productRelated/add-product', withAuth,async(req, res) => {
+router.get('/add-product', withAuth,async(req, res) => {
   
 
   if(req.session.position === "manager"){
@@ -101,12 +101,12 @@ router.get('/manage-option/productRelated/add-product', withAuth,async(req, res)
   });
   
 // page to search a product
-router.get('/manage-option/productRelated/search-product', withAuth,async(req, res) => {
+router.get('/search-product', withAuth,async(req, res) => {
   res.render('searchProduct');
 });
 
 //page to add employee
-router.get('/manage-option/add-employee', withAuth, async(req, res) => {
+router.get('/add-employee', withAuth, async(req, res) => {
   
   if(req.session.position === "manager"){
     res.render('addEmployee');

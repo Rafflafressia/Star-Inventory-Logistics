@@ -1,9 +1,9 @@
 const update_catalog_handler = () => {
-    document.location.replace('/manage-option/product-related');
+    document.location.replace('/product-related');
 }
 
 const add_employee_handler = () => {
-    document.location.replace('/manage-option/add-employee');
+    document.location.replace('/add-employee');
 }
   
 

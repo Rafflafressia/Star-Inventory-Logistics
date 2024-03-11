@@ -33,7 +33,7 @@ router.get('/login', async(req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login',{"logged_in": req.session.logged_in});
+  res.render('login',{"logged_in": req.session.logged_in, layout: false});
 
 });
 

@@ -120,5 +120,14 @@ router.get('/add-employee', withAuth, async(req, res) => {
   }
 });
 
+router.get('/search-result', withAuth, async(req, res) => {
+  
+  
+  res.render('searchResult');
+
+ 
+
+});
+
 
 module.exports = router;

@@ -14,10 +14,11 @@ const logout_handler = async () => {
     } else {
       alert(response.statusText);
     }
-  };
+};
+
 
 const setting_handler = () => {
-  document.location.replace('/manage-option');
+  document.location.assign('/manage-option');
 }
 
 document.querySelector('.settings').addEventListener('click', setting_handler);

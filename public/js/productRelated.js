@@ -1,5 +1,5 @@
 const add_new_product_handler = () => {
-    document.location.replace('/manage-option/productRelated/add-product');
+    document.location.replace('/add-product');
 }
 
   

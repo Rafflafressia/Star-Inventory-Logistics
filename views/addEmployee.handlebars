@@ -1,78 +1,80 @@
-
-  <nav class="navbar bg-dark navbar-dark p-4">
-    <div class="container-fluid d-flex justify-content-center  ">
-      <form class="d-flex" role="search">
-        <button class="bg-dark border-0 " type="submit"><img class="bg-dark w-75 " src="public\assets\images\icon-s.svg"
-            alt=""></button>
-        <input class="form-control me-2 bg-dark p-0 input border-top-0 border-start-0 border-end-0 rounded-0  "
-          type="search" placeholder="Search for product" aria-label="Search">
-      </form>
-    </div>
-  </nav>
-
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <div class="col-sm-4  text-center ">
-        <div>
-          <img class="img-fluid " src="public\assets\images\icon\imageicon.svg" alt="">
-        </div>
-        <div class="mt-5">
-          <div>
-            <button class="btn btn-primary mb-4 ">Update catalog</button>
-          </div>
-          <div>
-            <button class="btn btn-primary ">Add Employee</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-8 ">
-        <div class="back-g p-5 container ">
-          <form class="add-empoloyee-form">
-            <div class="row">
-              <div class="col-6 ">
-                <div>
-                  <label for="firstname">Employee First Name</label> <br>
-                  <input class="e-input mb-3 mt-1" type="text" id="firstname">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div>
-                  <label for="lastname">Employee Last Name</label> <br>
-                  <input class="e-input mb-3 mt-1" type="text" id="lastname">
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-6">
-                <div>
-                  <label for="username">Employee User Name</label> <br>
-                  <input class="e-input mt-2" type="text" id="username">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div>
-                  <label for="password">Employee Password</label> <br>
-                  <input class="e-input mt-2 mb-3 " type="text" id="password">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div>
-                  <label for="position">Position</label> <br>
-                  <input class="e-input mt-1" type="text" id="position">
-                </div>
-              </div>
-            </div>
-            
-            <div class="d-flex justify-content-end mt-lg-5">
-              <button class="btn btn-primary mt-sm-4 me-lg-5 justify-content-end" type="submit">Add Employee</button>
-            </div>
-          </form>
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-sm-4  text-center ">
+      <div>
+        <img class="img-fluid " src="public\assets\images\icon\imageicon.svg" alt="">
       </div>
     </div>
+
+    <div class="col-sm-8 ">
+      <div class="back-g p-5 container ">
+        <form class="add-empoloyee-form">
+          <div class="row">
+            <div class="col-6 ">
+              <div>
+                <label for="firstname">Employee First Name</label> <br>
+                <input class="e-input mb-3 mt-1" type="text" id="firstname">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div>
+                <label for="lastname">Employee Last Name</label> <br>
+                <input class="e-input mb-3 mt-1" type="text" id="lastname">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div>
+                <label for="username">Employee User Name</label> <br>
+                <input class="e-input mt-2" type="text" id="username">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div>
+                <label for="password">Employee Password</label> <br>
+                <input class="e-input mt-2 mb-3 " type="text" id="password">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div>
+                <label for="position">Position</label> <br>
+                <input class="e-input mt-1" type="text" id="position">
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex justify-content-end mt-lg-5">
+            <button class="btn btn-primary mt-sm-4 me-lg-5 justify-content-end"  type="submit">Add Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Show a second modal and hide this one with the button below.
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-primary pop-up hidden" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Create Successfully</a>
+
+
+
 
 <script src="/js/addEmployee.js"></script>
 

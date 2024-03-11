@@ -1,135 +1,35 @@
-
-<nav class="navbar bg-dark navbar-dark p-4">
-  <div class="container-fluid d-flex justify-content-center  ">
-    <form class="d-flex" role="search">
-      <button class="bg-dark border-0 " type="submit"><img class="bg-dark w-75 " src="public\assets\images\icon-s.svg"
-          alt=""></button>
-      <input
-        class="form-control me-2 bg-dark text-white  p-0 input border-top-0 border-start-0 border-end-0 rounded-0  "
-        type="search" placeholder="Search for product" aria-label="Search">
-    </form>
-  </div>
-</nav>
-
 <section>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="container">
-      <div class="mt-3">
-        <img class="img-fluid " src="public\assets\images\icon\imageicon.svg" alt="">
-      </div>
-      <div class="mt-4 ms-4 p">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button buttonf collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                category_name
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body buttons">
-                <h6>product_name</h6>
-                <h6 class="">product_name</h6>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                category_name
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body buttons">
-                <h6>product_name</h6>
-                <h6 class="">product_name</h6>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                category_name
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body buttons">
-                <h6>product_name</h6>
-                <h6 class="">product_name</h6>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
-                category_name
-              </button>
-            </h2>
-            <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body buttons">
-                <h6>product_name</h6>
-                <h6 class="">product_name</h6>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingfive">
-              <button class="accordion-button buttonl collapsed text-danger fw-bold " type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
-                category_name
-              </button>
-            </h2>
-            <div id="flush-collapsefive" class="accordion-collapse collapse" aria-labelledby="flush-headingfive"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body buttons">
-                <h6>product_name</h6>
-                <h6 class="">product_name</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
+    {{> accordion}}
     
-
     <div class="col-md-8 mt-4 mt-md-2 d-flex justify-content-center  ">
       <form class="background p-4 mt-3 add-product-form">
         <div class="row">
-          <div class="col-md-4 ">
+          <div class="col-md-4 add-product-input">
             <label for="new-product-name">Product Name:</label>
             <input type="text" id="new-product-name" name="new-product-name">
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 add-product-input">
             <label for="new-product-price">Product Price:</label>
             <input type="text" id="new-product-price" name="new-product-price">
           </div>
-          <div class="col-md-3 ms-md-5">
+          <div class="col-md-3 ms-md-5 add-product-input">
             <label for="new-product-stock">Product Stock:</label>
             <input type="text" id="new-product-stock" name="new-product-stock">
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 add-product-input">
             <label for="new-category-id">Category ID:</label>
             <input type="text" id="new-category-id" name="new-category-id">
           </div>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 add-product-input">
             <label for="new-product-description">Product Description:</label>
             <input type="text" id="new-product-description" name="new-product-description">
           </div>
           <div class="col-md-8 ">
-            <div class="ms-md-3">
+            <div class="ms-md-3 add-product-input">
               <label for="new-product-image">Product Image:</label>
               <input type="text" id="new-product-image" name="new-product-image">
             </div>
@@ -142,5 +42,23 @@
     </div>
   </div>
 </section>
+
+
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Show a second modal and hide this one with the button below.
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-primary pop-up hidden" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Create Successfully</a>
 
 <script src="/js/addNewProduct.js"></script>

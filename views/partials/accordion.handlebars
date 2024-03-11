@@ -3,27 +3,27 @@
     {{#each categories as |category|}}
     <div class="accordion-item">
       <h2 class="accordion-header" id="{{category_id}}-{{category_name}}">
+      <h2 class="accordion-header" id="{{category_id}}-{{category_name}}">
         <button
           class="accordion-button buttonf collapsed text-danger fw-bold"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#flush-{{category_id}}"
+          data-bs-target="#flush-collapse{{category_id}}"
           aria-expanded="false"
-          aria-controls="flush-{{category_id}}"
+          aria-controls="flush-collapse{{category_id}}"
         >
            {{category_name}}
         </button>
       </h2>
       <div
-        id="flush-{{category_id}}"
+        id="flush-collapse{{category_id}}"
         class="accordion-collapse collapse"
-        aria-labelledby="{{category_id}}-{{category_name}}"
-        data-bs-parent="#accordionFlushExample"
+        aria-labelledby="flush-headingOne"
+        data-bs-parent="#{{category_id}}-{{category_name}}"
       >
         <div class="accordion-body buttons">
           {{#each category.products as |product|}}
           <h6>{{product_name}}</h6>
-          <h6 class="">{{product_name}}</h6>
           {{/each}}
         </div>
       </div>

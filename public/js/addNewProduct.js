@@ -7,7 +7,10 @@ const add_new_product_handler = async(event) => {
     const product_description = document.querySelector('#new-product-description').value.trim();
     const product_image = document.querySelector('#new-product-image').value.trim();
 
-    console.log(product_name)
+    // Medal
+    const status_title = document.querySelector('#exampleModalToggleLabel');
+    const message = document.querySelector('.modal-body');
+    const pop_up = document.querySelector('.pop-up');
 
     if(product_name && product_price && product_stock && category_id && product_description && product_image){
         const response = await fetch('/api/products', {
@@ -26,11 +29,19 @@ const add_new_product_handler = async(event) => {
 
         if (response.ok){
            
-            console.log("New product added successfully");
+            status_title.innerText = "Product created Successfully";
+            message.innerText = "New product has been added successfully";
+            pop_up.click();
 
         }else{
-            alert("Failed to create a product");
+            status_title.innerText = "Product created failed";
+            message.innerText = "Please check your inputs and try again";
+            pop_up.click();
         }
+    }else{
+        status_title.innerText = "Product created failed";
+        message.innerText = "Please fill all boxes";
+        pop_up.click();
     }
 }
 

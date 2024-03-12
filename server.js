@@ -17,7 +17,7 @@ const hbs = exphbs.create({helpers});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// TODO Set up sessions with cookies. Need to set up secret key in .env
+
 const sess = {
   secret: process.env.SESSION_SECRET,
   cookie: {

@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { Product, Category } = require('../../models');
+const multer = require('multer');
+const upload = multer({ dest: 'public/assets/save' });
 
 // GET all Products
 router.get('/', async (req, res) => {
@@ -36,7 +38,7 @@ router.get('/:id', async (req, res)=>{
 
 
 // Create a new product
-router.post('/', async (req, res) => {
+router.post('/', upload.single('image'), async (req, res) => {
     /*
         {
             product_name:
@@ -44,18 +46,38 @@ router.post('/', async (req, res) => {
             stock:
             description:
             category_id:
+            iamge:
         }
     */
-    try {
-        const productData = await Product.create(req.body);
 
-        res.status(200).json(productData);
-
-    } catch(err){
-
-        res.status(400).json({message: "Could not create new post"});
-
+    // check if image_url or file are uploaded
+    let image_path;
+    if(req.body.image_url){
+        image_path = req.body.image_url;
+    }else if(req.file.filename){
+        image_path = '\\assets\\save\\' + req.file.filename
+    }else{
+        image_path = "To update"
     }
+   
+
+    const product_data = {
+        "product_name": req.body.product_name,
+        "price":req.body.price,
+        "stock":req.body.stock,
+        "description":req.body.description,
+        "category_id":req.body.category_id,
+        "image":image_path
+    }
+    
+    const productData = await Product.create(product_data);
+
+    
+
+    res.status(200).json(productData);
+
+
+    
 });
 
 // update details for a product

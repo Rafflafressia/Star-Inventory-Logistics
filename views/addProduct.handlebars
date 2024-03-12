@@ -1,10 +1,9 @@
 <section>
-    {{> accordion}}
-    
-    <div class="col-md-8 mt-4 mt-md-2 d-flex justify-content-center  ">
-      <form class="background p-4 mt-3 add-product-form">
-        <div class="row">
-          <div class="col-md-4 add-product-input">
+  <div class="add-product-container">
+    <div class="col-md-8 d-flex justify-content-center form-container">
+      <form class="background row p-4 mt-3 add-product-form">
+        <div class="col">
+          <div class="col-md-3 add-product-input">
             <label for="new-product-name">Product Name:</label>
             <input type="text" id="new-product-name" name="new-product-name">
           </div>
@@ -12,35 +11,35 @@
             <label for="new-product-price">Product Price:</label>
             <input type="text" id="new-product-price" name="new-product-price">
           </div>
-          <div class="col-md-3 ms-md-5 add-product-input">
+          <div class="col-md-3 add-product-input">
             <label for="new-product-stock">Product Stock:</label>
             <input type="text" id="new-product-stock" name="new-product-stock">
           </div>
         </div>
-        <div class="row">
+        <div class="col">
           <div class="col-md-4 add-product-input">
-            <label for="new-category-id">Category ID:</label>
+            <label for="new-category-id">Category Name:</label>
             <input type="text" id="new-category-id" name="new-category-id">
           </div>
-        </div>
-        <div class="row">
           <div class="col-4 add-product-input">
             <label for="new-product-description">Product Description:</label>
             <input type="text" id="new-product-description" name="new-product-description">
           </div>
           <div class="col-md-8 ">
-            <div class="ms-md-3 add-product-input">
-              <label for="new-product-image">Product Image:</label>
+            <div class="add-product-input">
+              <label for="new-product-image">Product Image URL:</label>
               <input type="text" id="new-product-image" name="new-product-image">
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-end mt-4 ">
+        <div class="d-flex justify-content-center mt-4 ">
           <button class="btn btn-primary add-new-product-btn" type="submit">Add New Product</button>
         </div>
       </form>
     </div>
   </div>
+  </div>
+    
 </section>
 
 

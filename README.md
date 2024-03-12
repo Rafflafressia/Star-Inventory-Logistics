@@ -3,19 +3,17 @@ Managing your wholesale inventory
 
 Product Management System
 Overview
-Objective: To understand the design and functionality of a Product Management System.
+Objective: To understand the design and functionality of a inventory and Product Management System.
 Key Features: Category and Product Management, User Authentication, Role-based Access Control.
 Agenda
 Introduction to Product Management System
 System Architecture
-Key Features
-Demo
-Q&A
+Key Features:
 Introduction
 Product Management System: A web application for managing products, users, and sales.
 Features: Categories with products, user authentication, role-based access control.
 System Architecture
-Frontend: HTML, CSS, JavaScript using Bootstrap and .
+Frontend: HTML, CSS, JavaScript using Bootstrap and Tailwind.
 Backend: Node.js with Express.js (for RESTful APIs).
 Database: MySQL (for storing categories, products, users).
 Authentication: secure authentication.
@@ -23,7 +21,7 @@ Key Features
 Category and Products:
 
 Categories with a list of products.
-Products have attributes like name, price, description.
+Products have attributes like product name, price, description.
 
 User Authentication:
 
@@ -36,7 +34,8 @@ Managers and Users have different access levels.
 Managers can create users, assign products.
 Users can view products, manage sales.
 
-Demo
+Demo:
+
 Login Page:
 
 Show the login page.
@@ -51,13 +50,12 @@ User Page:
 Show the user dashboard.
 View assigned products, manage sales.
 Conclusion
-Recap of key features and functionality.
 Importance of role-based access control in system security.
 
 
 # Product Management System
 
-This project is a Product Management System that allows managers to manage products and users, and users to view and sell products.
+This project is a Inventory and Product Management System that allows managers to manage products and users, and users to view and sell products.
 
 ## Features
 

@@ -1,19 +1,31 @@
 /* main.handlebar body styling */
 body {
     scroll-behavior: auto;
+    background-attachment: fixed;
+}
+
+main {
+  display: flex;
 }
 
 .hidden{
   display: none;
 }
 
-
-
 .logout,
 .settings:hover{
   cursor: pointer;
 }
 
+.logo-bg {
+  position:fixed;
+  width: auto;
+  left:900px;
+  top: 275px;
+  z-index: -1;
+  padding:0;
+  margin:0;
+}
 
 ul {
   list-style-type: none;
@@ -31,6 +43,7 @@ li {
 
 section {
   display:flex;
+  justify-content: center;
 }
 
 /* CSS for logo */
@@ -127,6 +140,7 @@ section {
   background-color: rgb(216, 210, 210);
   display: block;
   padding: 30px;
+  width: 400px;
   border-bottom: 1px solid black;
 }
 .buttonl {
@@ -212,6 +226,51 @@ font: 1em sans-serif;
 }
 
 /* Product Description Page CSS */
+.productDetailContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  margin: 20px;
+  padding-bottom: 30px;
+  width: 950px;
+  background-color:#c1daf776;  
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.397);
+  color: rgb(0, 0, 0);
+}
+
+.productImg {
+  position: relative;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgb(48, 48, 48);
+}
+
+
+.btnBox {
+  padding: 10px; 
+}
+
+.priceBox {
+  position: relative;
+  right: 15px; 
+  margin: 10px;
+}
+
+.price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bolder;
+}
+
 .accordion-button {
   background-color: rgb(216, 210, 210);
   display: block;
@@ -239,14 +298,17 @@ font: 1em sans-serif;
 .price {
   width: 120px;
   height: 50px;
-  background-color: rgba(161, 158, 158, 0.849);
+  background-color: #b1c8e276; 
+  border-radius: 10px;
+  color: rgb(179, 32, 32)
 }
 
 .descrip {
-  background-color: rgba(161, 158, 158, 0.849);
+  background-color: #b1c8e276; 
   height: 200px;
+  width: 500px;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 10px;
 }
 .accordion.accordion-flush {
   border-radius: 1.4em;
@@ -279,4 +341,165 @@ font: 1em sans-serif;
 
 .add-product-input{
   margin: 20px;
+}
+
+/* Manager Option CSS */
+.optionImg {
+  position: relative;
+  top: -200px;
+}
+
+.manager-container {
+  max-width: 600px;
+  height:400px;
+  text-align: center;
+  margin:auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #c1daf776;
+}
+
+.option-button-container {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  top: -250px;
+}
+
+.optionContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.upload-catalog-btn{
+  width: 200px;
+}
+
+.upload-catalog-btn:hover {
+  box-shadow:  1px 3px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.add-employee-btn{
+  width: 200px;
+}
+
+.add-employee-btn:hover {
+  box-shadow:  1px 3px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+/* productRelated CSS */
+
+.para{
+  color: rgb(29, 100, 148);
+}
+
+.border-line {
+  border-top: 4px solid red;
+}
+
+.product-related-section {
+  position: relative;
+  left: 700px;
+}
+
+.product-related-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 500px;
+  background-color: #c1daf776;  
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+}
+
+.add-new-product-btn {
+  position: relative;
+  bottom: 20px;
+  width: 200px;
+}
+
+.add-employee-btn:hover{
+  box-shadow:  1px 3px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.related-search{
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(119, 119, 119);
+  background:transparent;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.related-search::placeholder{
+  color: rgb(29, 100, 148);
+}
+
+/* Add Product CSS */
+.add-product-container{
+  position: relative;
+  left: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 900px;
+  background-color: #5b6168;  
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.397);
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+}
+
+.form-container{
+  display:flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Add Employee CSS */
+.add-employee-container{
+  position: relative;
+  left: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 900px;
+  background-color: #5b6168;  
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.397);
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+}
+
+.add-empoloyee-form{
+  position:relative;
+  left: 140px;
+  justify-content: center;
+}
+
+.add-employee-button{
+  position: relative;
+  right: 50px;
+  bottom: 20px;
+  width: 200px;
+}
+
+.add-employee-button:hover{
+  box-shadow:  1px 3px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
 }

@@ -1,7 +1,7 @@
 <section>
   <div class="add-product-container">
     <div class="col-md-8 d-flex justify-content-center form-container">
-      <form class="background row p-4 mt-3 add-product-form">
+      <form class="background row p-4 mt-3 add-product-form" enctype="multipart/form-data">
         <div class="col">
           <div class="col-md-3 add-product-input">
             <label for="new-product-name">Product Name:</label>
@@ -29,8 +29,11 @@
             <div class="add-product-input">
               <label for="new-product-image">Product Image URL:</label>
               <input type="text" id="new-product-image" name="new-product-image">
-              <input type="file" name="image" id="local-product-image" accept="image/*">
             </div>
+            <div class="add-product-input">
+              <label for="local-product-image">Local Product Image:</label>
+              <input type="file" name="image" id="local-product-image" accept="image/*">
+          </div>
           </div>
         </div>
         <div class="d-flex justify-content-center mt-4 ">

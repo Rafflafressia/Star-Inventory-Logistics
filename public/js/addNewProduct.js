@@ -6,7 +6,7 @@ const add_new_product_handler = async(event) => {
     const category_id = document.querySelector('#new-category-id').value.trim();
     const product_description = document.querySelector('#new-product-description').value.trim();
     const product_image_url = document.querySelector('#new-product-image').value.trim();
-    const product_image_local = document.querySelector('#local-product-image').value
+    const product_image_local = document.querySelector('#local-product-image').files[0]
 
     // Medal for status
     const status_title = document.querySelector('#exampleModalToggleLabel');
@@ -15,19 +15,21 @@ const add_new_product_handler = async(event) => {
 
     //send request to back end to create product
     if(product_name && product_price && product_stock && category_id && product_description && product_image_local){
+        const formData = new FormData();
+        formData.append('product_name', product_name);
+        formData.append('price', product_price);
+        formData.append('stock', product_stock);
+        formData.append('description', product_description);
+        formData.append('category_id', category_id);
+        formData.append('image', product_image_local);
+
+     
+
         const response = await fetch('/api/products', {
             method: 'POST',
-            body: JSON.stringify({ 
-                "product_name":product_name,
-                "price":product_price,
-                "stock":product_stock,
-                "description":product_description,
-                "category_id": category_id,
-                "image":product_image_local
+            body: formData
+        });
 
-        }),
-            headers: { 'Content-Type': 'application/json' },
-        })
 
         if (response.ok){
             // successful status

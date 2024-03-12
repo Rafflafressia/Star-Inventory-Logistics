@@ -12,7 +12,7 @@ const add_new_employee_handler = async(event) => {
     const pop_up = document.querySelector('.pop-up');
     
     if(first_name && last_name && user_name && password && position){
-        const response = await fetch('/api/add-employee', {
+        const response = await fetch('/api/employee/add-employee', {
             method: 'POST',
             body: JSON.stringify({
                 "user_name": user_name,

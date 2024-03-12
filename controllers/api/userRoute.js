@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {UserData, Employee} = require('../../models');
 
 
-
+// login api router
 router.post('/login', async (req, res) => {
 
   try{
@@ -47,7 +47,7 @@ router.post('/login', async (req, res) => {
 })
 
 
-
+// log out api router
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       // Remove the session variables

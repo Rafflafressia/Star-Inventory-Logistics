@@ -83,6 +83,7 @@ router.get('/manage-option', withAuth, (req, res) => {
   
 });
 
+// page for manager to choose if they want to search a product or add one
 router.get('/product-related', withAuth, async(req, res) => {
   
   if(req.session.position === "manager"){
@@ -124,12 +125,11 @@ router.get('/add-employee', withAuth, async(req, res) => {
 //show search result
 router.get('/search-result',  async(req, res) => {
 
+  // get pass in information
   const product_name = req.query.product_name;
 
-  
-    
   let productData;
-
+  // filter data related to product name
   const categoryData = await Category.findAll({
     include: {model: Product, attributes: ['product_name']}
   });

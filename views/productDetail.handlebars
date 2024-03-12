@@ -1,6 +1,6 @@
-<section>
 {{> accordion}}
 
+<section>
 {{!-- Product Description Page --}}
 {{!-- This is the product detail page. It will display the product image, name, price, and description. --}}
 {{!-- The user will be able to request a quote for the product. --}}
@@ -9,30 +9,28 @@
 <div class="productDetailContainer">
 
   <div class="col-md-6">
-    <img src="{{productDetails.image}}" alt="{{productDetails.product_name}} image" class="img-fluid">
-  </div>
-  <div class="col-md-6">
     <div class=" mt-5 ms-4 ms-md-3">
-      <div class="d-flex ">
-        <div>
+      <div class="d-flex">
+        <div class="productBox">
           <h1>{{productDetails.product_name}}</h1>
-          <div class="bg"></div>
+          <div class="productImg"></div>
         </div>
+    <div>
+
+      <div>
+        <h3 class="my-3" for="description">Description</h3>
+        <div class="descrip">{{productDetails.description}}</div>
+      </div>
         
-        <div class=" ms-3 ">
-          <div class="pp">
-            <h2>price</h2>
+        <div class=" ms-3 priceBox">
+            <h3>Price</h3>
             <div class="price">{{productDetails.price}}</div>
-          </div>
         </div>
       </div>
-      
-      <div>
-        <label class="fw-bold my-3" for="description">description</label><br>
-        <textarea name="" id="description" class="descrip w-100 ">{{productDetails.description}}</textarea>
-      </div>
-      <div>
-        <button class="btn btn-primary mt-2 ">Quote</button>
+    </div>
+
+      <div class="btnBox">
+        <button class="btn btn-primary mt-2 quoteBtn">Quote</button>
       </div>
     </div>
   </div>

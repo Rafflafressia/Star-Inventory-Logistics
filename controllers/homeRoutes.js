@@ -14,8 +14,8 @@ router.get('/',withAuth,async (req, res) => {
 
     const productData = await Product.findAll({
       include:[{model:Category}]
-    });   
-
+    });
+    
     const products = productData.map((product) => product.get({plain: true}));
     const categories = categoryData.map((category) => category.get({plain: true}));
 

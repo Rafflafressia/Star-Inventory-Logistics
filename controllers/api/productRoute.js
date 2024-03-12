@@ -50,9 +50,16 @@ router.post('/', upload.single('image'), async (req, res) => {
         }
     */
 
-    
-    const image_path = '\\assets\\save\\' + req.file.filename
-    console.log({"file": image_path});
+    // check if image_url or file are uploaded
+    let image_path;
+    if(req.body.image_url){
+        image_path = req.body.image_url;
+    }else if(req.file.filename){
+        image_path = '\\assets\\save\\' + req.file.filename
+    }else{
+        image_path = "To update"
+    }
+   
 
     const product_data = {
         "product_name": req.body.product_name,

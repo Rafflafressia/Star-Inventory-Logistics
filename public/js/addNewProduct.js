@@ -14,13 +14,25 @@ const add_new_product_handler = async(event) => {
     const pop_up = document.querySelector('.pop-up');
 
     //send request to back end to create product
-    if(product_name && product_price && product_stock && category_id && product_description && product_image_local){
+    if(product_name && product_price && product_stock && category_id && product_description){
+        
+        if(product_image_url && product_image_local){
+           alert("Please only upload one image per time!")
+           return
+        }
+
+        if (!product_image_url && !product_image_local){
+            alert("Please upload image!")
+            return
+        }
+        
         const formData = new FormData();
         formData.append('product_name', product_name);
         formData.append('price', product_price);
         formData.append('stock', product_stock);
         formData.append('description', product_description);
         formData.append('category_id', category_id);
+        formData.append('image_url', product_image_url);
         formData.append('image', product_image_local);
 
      

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { UserData, Category, Employee, Product } = require('../models');
-const {withAuth, isManager} = require('../utils/auth');
+const {withAuth} = require('../utils/auth');
 const { Op } = require('sequelize');
 
 

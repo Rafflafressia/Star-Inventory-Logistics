@@ -16,13 +16,13 @@ const logout_handler = async () => {
     }
 };
 
-
+// manager bar
 const setting_handler = () => {
   document.location.assign('/manage-option');
 }
 
 
-//
+//search product bar
 const search_handler = async () => {
 
   const search_bar = document.querySelector('#search-input');

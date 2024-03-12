@@ -271,6 +271,7 @@ font: 1em sans-serif;
   font-weight: bolder;
 }
 
+/* Accordion */
 .accordion-button {
   background-color: rgb(216, 210, 210);
   display: block;

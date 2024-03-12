@@ -1,7 +1,9 @@
+// go to product related page
 const update_catalog_handler = () => {
     document.location.replace('/product-related');
 }
 
+// go to add employee page
 const add_employee_handler = () => {
     document.location.replace('/add-employee');
 }

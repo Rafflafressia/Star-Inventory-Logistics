@@ -4,7 +4,7 @@ const {withAuth, isManager} = require('../utils/auth');
 
 
 // main page router, shows default category
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
@@ -13,8 +13,8 @@ router.get('/', async (req, res) => {
 
     const productData = await Product.findAll({
       include:[{model:Category}]
-    });   
-
+    });
+    
     const products = productData.map((product) => product.get({plain: true}));
     const categories = categoryData.map((category) => category.get({plain: true}));
 

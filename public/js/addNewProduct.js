@@ -5,7 +5,8 @@ const add_new_product_handler = async(event) => {
     const product_stock = document.querySelector('#new-product-stock').value.trim();
     const category_id = document.querySelector('#new-category-id').value.trim();
     const product_description = document.querySelector('#new-product-description').value.trim();
-    const product_image = document.querySelector('#new-product-image').value.trim();
+    const product_image_url = document.querySelector('#new-product-image').value.trim();
+    const product_image_local = document.querySelector('#local-product-image').value
 
     // Medal for status
     const status_title = document.querySelector('#exampleModalToggleLabel');
@@ -13,7 +14,7 @@ const add_new_product_handler = async(event) => {
     const pop_up = document.querySelector('.pop-up');
 
     //send request to back end to create product
-    if(product_name && product_price && product_stock && category_id && product_description && product_image){
+    if(product_name && product_price && product_stock && category_id && product_description && product_image_local){
         const response = await fetch('/api/products', {
             method: 'POST',
             body: JSON.stringify({ 
@@ -22,7 +23,7 @@ const add_new_product_handler = async(event) => {
                 "stock":product_stock,
                 "description":product_description,
                 "category_id": category_id,
-                "image":product_image
+                "image":product_image_local
 
         }),
             headers: { 'Content-Type': 'application/json' },

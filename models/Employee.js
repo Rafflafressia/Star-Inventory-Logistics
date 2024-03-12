@@ -5,6 +5,7 @@ const sequelize = require('../config/connection.js');
 
 class Employee extends Model {};
 
+// employee database set up
 Employee.init({
     user_id: {
         type: DataTypes.INTEGER,

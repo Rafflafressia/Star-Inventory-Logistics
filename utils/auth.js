@@ -1,3 +1,4 @@
+//middleware for authentication 
 const withAuth = (req, res, next) => {
 
     if (!req.session.logged_in) {
@@ -7,14 +8,4 @@ const withAuth = (req, res, next) => {
     }
 };
 
-const isManager = (req, res, next) => {
-  if (!req.session.position == "manager") {
-    res.redirect('/');
-  }else {
-    next();
-  }
-  
-}
-
-  
-  module.exports = {withAuth,isManager};
+module.exports = {withAuth};

@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { UserData, Category, Employee, Product } = require('../models');
-const {withAuth, isManager} = require('../utils/auth');
+const {withAuth} = require('../utils/auth');
+const { Op } = require('sequelize');
 
 
 // main page router, shows default category
-router.get('/', withAuth, async (req, res) => {
+router.get('/',withAuth,async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
@@ -82,6 +83,7 @@ router.get('/manage-option', withAuth, (req, res) => {
   
 });
 
+// page for manager to choose if they want to search a product or add one
 router.get('/product-related', withAuth, async(req, res) => {
   
   if(req.session.position === "manager"){
@@ -120,10 +122,38 @@ router.get('/add-employee', withAuth, async(req, res) => {
   }
 });
 
-router.get('/search-result', withAuth, async(req, res) => {
+//show search result
+router.get('/search-result',  async(req, res) => {
+
+  // get pass in information
+  const product_name = req.query.product_name;
+
+  let productData;
+  // filter data related to product name
+  const categoryData = await Category.findAll({
+    include: {model: Product, attributes: ['product_name']}
+  });
+
+  if (product_name){
+          productData = await Product.findAll({
+              where: {
+                  product_name: {[Op.like]: `%${product_name}%`}
+              },
+              include: [{ model: Category }]
+      });
+
+  }else {
+   
+      productData = await Product.findAll({
+          include: [{ model: Category }]
+      });
+  }
   
+  const products = productData.map((product) => product.get({plain: true}));
+  const categories = categoryData.map((category) => category.get({plain: true}));
+
   
-  res.render('searchResult');
+  res.render('searchResult',{products,categories});
 
  
 

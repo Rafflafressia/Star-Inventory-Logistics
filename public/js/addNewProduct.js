@@ -5,14 +5,16 @@ const add_new_product_handler = async(event) => {
     const product_stock = document.querySelector('#new-product-stock').value.trim();
     const category_id = document.querySelector('#new-category-id').value.trim();
     const product_description = document.querySelector('#new-product-description').value.trim();
-    const product_image = document.querySelector('#new-product-image').value.trim();
+    const product_image_url = document.querySelector('#new-product-image').value.trim();
+    const product_image_local = document.querySelector('#local-product-image').value
 
-    // Medal
+    // Medal for status
     const status_title = document.querySelector('#exampleModalToggleLabel');
     const message = document.querySelector('.modal-body');
     const pop_up = document.querySelector('.pop-up');
 
-    if(product_name && product_price && product_stock && category_id && product_description && product_image){
+    //send request to back end to create product
+    if(product_name && product_price && product_stock && category_id && product_description && product_image_local){
         const response = await fetch('/api/products', {
             method: 'POST',
             body: JSON.stringify({ 
@@ -21,24 +23,26 @@ const add_new_product_handler = async(event) => {
                 "stock":product_stock,
                 "description":product_description,
                 "category_id": category_id,
-                "image":product_image
+                "image":product_image_local
 
         }),
             headers: { 'Content-Type': 'application/json' },
         })
 
         if (response.ok){
-           
+            // successful status
             status_title.innerText = "Product created Successfully";
             message.innerText = "New product has been added successfully";
             pop_up.click();
 
         }else{
+            // failed status
             status_title.innerText = "Product created failed";
             message.innerText = "Please check your inputs and try again";
             pop_up.click();
         }
     }else{
+        // all box should be filled
         status_title.innerText = "Product created failed";
         message.innerText = "Please fill all boxes";
         pop_up.click();

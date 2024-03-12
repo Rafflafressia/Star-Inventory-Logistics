@@ -29,6 +29,7 @@
             <div class="add-product-input">
               <label for="new-product-image">Product Image URL:</label>
               <input type="text" id="new-product-image" name="new-product-image">
+              <input type="file" name="image" id="local-product-image" accept="image/*">
             </div>
           </div>
         </div>
@@ -43,7 +44,7 @@
 </section>
 
 
-
+{{!-- modal for status --}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">

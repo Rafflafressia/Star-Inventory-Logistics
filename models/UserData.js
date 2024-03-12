@@ -10,6 +10,7 @@ class UserData extends Model {
     }
 };
 
+// user database set up
 UserData.init({
     user_id: {
         type: DataTypes.INTEGER,

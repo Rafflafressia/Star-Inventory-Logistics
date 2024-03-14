@@ -15,7 +15,7 @@
     <a href="https://github.com/Rafflafressia/Star-Inventory-Logistics"><strong>Click here for Github Repo  »</strong></a>
     <br />
     <br />
-    <a href="">Deployed Demo</a>
+    <a href="https://star-inventory-logistics-36c6a2954dc4.herokuapp.com/login">Deployed Demo</a>
     ·
     <a href="https://github.com/Rafflafressia/Star-Inventory-Logistics/issues">Report Bug</a>
     ·

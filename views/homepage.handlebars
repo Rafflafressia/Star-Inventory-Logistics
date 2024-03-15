@@ -1,19 +1,17 @@
-
 <section>
 {{> accordion}}
 
 
 {{!-- Product Cards --}}
-<div class="row mt-4 ms-5 ms-ms-0">
+<div class="products w-full">
+  <div class="flex flex-wrap flex-col w-[920px] ">
   {{#each products as |product|}}
-    <div class="productCard" data-id="{{product_id}}">
-      <h6 class="cardName" data-id="{{product_id}}">{{product.product_name}}</h6>
-      <div class="box" data-id="{{product_id}}"><img class="box" src="{{image}}" alt="Rendering Picture"></div>
+    <div class="card-click flex border-b-2 p-2 bg-gray-400 hover:bg-gray-500 space-x-[400px] cursor-pointer bg-opacity-90" data-id="{{product_id}}">
+      <h6 class="cardName card-click text-m font-bold text-white cursor-pointer" data-id="{{product_id}}">{{product.product_name}}</h6>
     </div>
   {{/each}}
 </div>
-
-
+</div>
 
 </section>
 

@@ -20,8 +20,6 @@ main {
 .logo-bg {
   position:fixed;
   width: auto;
-  left:900px;
-  top: 275px;
   z-index: -1;
   padding:0;
   margin:0;
@@ -42,31 +40,12 @@ li {
 }
 
 section {
+  margin-top: 20px; 
   display:flex;
-  justify-content: center;
+  flex-direction: row;
+  
 }
 
-/* CSS for logo */
-.logo {
-  position: relative;
-  right: 275px;
-}
-
-/* header css */
-.slhead {
-  display: flex;
-  width: 100%;
-  height: 100px;
-  background: #404040;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Div for Searchbox */
-.searchBox{
-  position: relative;
-  left: 50px;
-}
 /* Search Bar */
 .search{
   outline: 0;
@@ -75,12 +54,6 @@ section {
   background:transparent;
   text-align: center;
   color: white;
-}
-
-/* Navigation Bar styling */
-.nav{
-  position: relative;
-  left: 375px;
 }
 
 /* Product Card Styling */   
@@ -100,16 +73,6 @@ section {
   border-radius: 10px;
 }
 
-.cardName {
-  text-align: center;
-  font-size: larger;
-  font-weight: bolder;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: rgb(249, 253, 255);
-  border-radius: 5px;
-}
-
 .productCard {
   background-color: rgb(197, 209, 212);
   border-radius: 25px;
@@ -122,39 +85,6 @@ section {
   transition: 0.2s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
-}
-
-/* Side Bar Navigation Styling */
-.sideBar {
-  width: 300px; 
-  margin: 20px; 
-} 
-
-.form-control::placeholder {
-  color: white;
-  opacity: 0.5;
-  text-align: center;
-}
-
-.accordion-button {
-  background-color: rgb(216, 210, 210);
-  display: block;
-  padding: 30px;
-  width: 400px;
-  border-bottom: 1px solid black;
-}
-.buttonl {
-  padding-bottom: 100px;
-  border-bottom: none;
-  border-radius: 0px 0px 10px 10px;
-}
-
-.buttons {
-  background-color: rgb(177, 173, 173);
-}
-.accordion.accordion-flush {
-  border-radius: 1.4em;
-  overflow: hidden;
 }
 
 /* Login Page CSS */
@@ -269,75 +199,6 @@ font: 1em sans-serif;
   align-items: center;
   font-size: larger;
   font-weight: bolder;
-}
-
-/* Accordion */
-.accordion-button {
-  background-color: rgb(216, 210, 210);
-  display: block;
-  padding: 30px;
-  border-bottom: 1px solid black;
-}
-
-.buttonl {
-  padding-bottom: 100px;
-
-  border-bottom: none;
-  border-radius: 0px 0px 10px 10px;
-}
-
-.buttons {
-  background-color: rgb(177, 173, 173);
-}
-
-.bg {
-  height: 200px;
-  width: 250px;
-  background-color: rgba(161, 158, 158, 0.849);
-}
-
-.price {
-  width: 120px;
-  height: 50px;
-  background-color: #b1c8e276; 
-  border-radius: 10px;
-  color: rgb(179, 32, 32)
-}
-
-.descrip {
-  background-color: #b1c8e276; 
-  height: 200px;
-  width: 500px;
-  border-radius: 20px;
-  padding: 10px;
-}
-.accordion.accordion-flush {
-  border-radius: 1.4em;
-  overflow: hidden;
-}
-
-.b_g {
-  background-color: rgba(161, 158, 158, 0.849);
-  border-radius: 20px;
-}
-.b_g input {
-  outline: none;
-}
-
-.input-1 {
-  height: 55px;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  box-shadow: inset 0px 2px 5px rgb(87, 87, 87);
-}
-
-.ch-box {
-  width: 20px;
-  height: 20px;
-  box-shadow: 0px 2px 5px rgb(88, 88, 88);
-}
-.pp {
-  padding-top: 150px;
 }
 
 .add-product-input{

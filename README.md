@@ -177,7 +177,7 @@ View assigned products
 ## Contact
 
 
-Arkaw Banerjee - [Email]
+Arkaw Banerjee - [Email] (arkaw.banerjee@gmail.com) - arkaw.banerjee@gmail.com
 Bahman Dorandish - [Email]
 Mohnish Bhujun - [Email]
 Shuai(Jason) Gu - [Email](king.gs1314@outlook.com) - king.gs1314@outlook.com

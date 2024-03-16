@@ -8,10 +8,12 @@ const add_new_product_handler = async(event) => {
     const product_image_url = document.querySelector('#new-product-image').value.trim();
     const product_image_local = document.querySelector('#local-product-image').files[0]
 
-    // Medal for status
-    const status_title = document.querySelector('#exampleModalToggleLabel');
+    // Modal for status
+    const status_title = document.querySelector('.modal-title');
     const message = document.querySelector('.modal-body');
-    const pop_up = document.querySelector('.pop-up');
+
+    // Modal Window
+    const modal_window = document.querySelector('.modal-window');
 
     //send request to back end to create product
     if(product_name && product_price && product_stock && category_id && product_description){
@@ -45,21 +47,35 @@ const add_new_product_handler = async(event) => {
 
         if (response.ok){
             // successful status
+            modal_window.style.display = "block";
             status_title.innerText = "Product created Successfully";
             message.innerText = "New product has been added successfully";
-            pop_up.click();
-
+            window.onclick = function(event) {
+                if (event.target !== modal_window || event.target == modal_window) {
+                    modal_window.style.display = "none";
+                }
+            }
         }else{
             // failed status
+            modal_window.style.display = "block";
             status_title.innerText = "Product created failed";
             message.innerText = "Please check your inputs and try again";
-            pop_up.click();
+            window.onclick = function(event) {
+                if (event.target !== modal_window || event.target == modal_window) {
+                    modal_window.style.display = "none";
+                }
+            }
         }
     }else{
         // all box should be filled
+        modal_window.style.display = "block";
         status_title.innerText = "Product created failed";
         message.innerText = "Please fill all boxes";
-        pop_up.click();
+        window.onclick = function(event) {
+            if (event.target !== modal_window || event.target == modal_window) {
+                modal_window.style.display = "none";
+            }
+        }
     }
 }
 

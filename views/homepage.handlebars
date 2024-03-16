@@ -4,10 +4,10 @@
 
 {{!-- Product Cards --}}
 <div class="products w-full">
-  <div class="flex flex-wrap flex-col w-[920px] ">
+  <div class="flex flex-wrap flex-col w-[920px] sm:w-[625px] lg:w-[1000px] xl:w-[1100px] 2xl:w-[1550px]">
   {{#each products as |product|}}
     <div class="card-click flex border-b-2 p-2 bg-gray-400 hover:bg-gray-500 space-x-[400px] cursor-pointer bg-opacity-90" data-id="{{product_id}}">
-      <h6 class="cardName card-click text-m font-bold text-white cursor-pointer" data-id="{{product_id}}">{{product.product_name}}</h6>
+      <h6 class="cardName card-click text-m font-bold text-white cursor-pointer xl:text-2xl" data-id="{{product_id}}">{{product.product_name}}</h6>
     </div>
   {{/each}}
 </div>

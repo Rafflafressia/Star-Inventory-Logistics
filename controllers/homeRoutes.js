@@ -5,7 +5,7 @@ const { Op } = require('sequelize');
 
 
 // main page router, shows default category
-router.get('/',withAuth,async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
 
     const categoryData = await Category.findAll({
@@ -69,6 +69,33 @@ router.get('/productDetail-:product_id', withAuth,async(req, res) => {
 
 });
 
+// filter category routes
+router.get('/categoryDetail-:category_id', withAuth, async(req, res) => {
+  try {
+    const categoryData = await Category.findByPk(req.params.category_id, {
+      include: {model: Product, attributes: ['product_name', 'product_id']}
+    });
+
+    const allCategoryData = await Category.findAll({
+      include: {model: Product, attributes: ['product_name']}
+    });
+
+    if (!categoryData){
+      return res.status(404).json({message: "Baboob: Category could not be found"});
+    }
+
+    if (!allCategoryData){
+      return res.status(404).json({message: "Baboob: Category could not be found"});
+    }
+
+    const categories = categoryData.get({plain: true});
+    const allCategories = allCategoryData.map((category) => category.get({plain: true}));
+
+    res.render('categoryDetail', { categories, allCategories });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // this is the page to update catalog and add employee for manager
 router.get('/manage-option', withAuth, (req, res) => {

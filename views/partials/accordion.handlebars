@@ -1,33 +1,9 @@
-<div class="sideBar">
-  <div class="accordion accordion-flush" id="accordionFlushExample">
+<div class="sideBar relative m-5 border-r-2 h-screen">    
+    <div class="my-6 w-56">
     {{#each categories as |category|}}
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="{{category_id}}-{{category_name}}">
-      <h2 class="accordion-header" id="{{category_id}}-{{category_name}}">
-        <button
-          class="accordion-button buttonf collapsed text-danger fw-bold"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapse{{category_id}}"
-          aria-expanded="false"
-          aria-controls="flush-collapse{{category_id}}"
-        >
-           {{category_name}}
-        </button>
-      </h2>
-      <div
-        id="flush-collapse{{category_id}}"
-        class="accordion-collapse collapse"
-        aria-labelledby="flush-headingOne"
-        data-bs-parent="#{{category_id}}-{{category_name}}"
-      >
-        <div class="accordion-body buttons">
-          {{#each category.products as |product|}}
-          <h6>{{product_name}}</h6>
-          {{/each}}
+        <div class="category-btn p-3 text-right text-lg border-b-2 cursor-pointer hover:bg-blue-100 hover:text-red-400 hover:font-bold rounded-l-xl" data-id="{{category_id}}">
+          {{category_name}}
         </div>
-      </div>
+     {{/each}}
     </div>
-    {{/each}}
-  </div>
-</div>
+ </div>

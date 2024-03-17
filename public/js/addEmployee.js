@@ -6,10 +6,12 @@ const add_new_employee_handler = async(event) => {
     const password = document.querySelector('#password').value.trim();
     const position = document.querySelector('#position').value.trim();
 
-    // Medal for status
-    const status_title = document.querySelector('#exampleModalToggleLabel');
+    // Modal for status
+    const status_title = document.querySelector('.modal-title');
     const message = document.querySelector('.modal-body');
-    const pop_up = document.querySelector('.pop-up');
+
+    // Modal Window
+    const modal_window = document.querySelector('.modal-window');
     
     //send request to back end to create employees
     if(first_name && last_name && user_name && password && position){
@@ -26,21 +28,39 @@ const add_new_employee_handler = async(event) => {
         })
         // successful status
         if (response.ok){
-            status_title.innerText = "Empolyee created Successfully";
+            modal_window.style.display = "block";
+            status_title.innerText = "Employee created Successfully";
             message.innerText = "New employee has been added successfully";
-            pop_up.click();
+            
+            window.onclick = function(event) {
+                if (event.target !== modal_window || event.target == modal_window) {
+                    modal_window.style.display = "none";
+                }
+            }
         
         // failed status
-        }else{
-           status_title.innerText = "Empolyee created failed";
+        }else{ 
+           modal_window.style.display = "block";
+           status_title.textContent = "Employee created failed";
            message.innerText = "Please check your inputs and try again";
-           pop_up.click();
+           
+           window.onclick = function(event) {
+            if (event.target !== modal_window || event.target == modal_window) {
+                modal_window.style.display = "none";
+            }
+        }
         }
     }else{
         // all box should be filled
-        status_title.innerText = "Empolyee created failed";
+        modal_window.style.display = "block";
+        status_title.textContent = "Employee created failed";
         message.innerText = "Please fill all boxes";
-        pop_up.click();
+          
+        window.onclick = function(event) {
+                if (event.target !== modal_window || event.target == modal_window) {
+                    modal_window.style.display = "none";
+                }
+            }
     }
 }
 

@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <link rel="stylesheet" type ="text/css" href="/css/style.css">
-
+    <link rel="stylesheet" href="/css/style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
     <title>Star Management System</title>
 </head>
 <body>
     
-    <header class = "slhead">
-        <div class="logo">
+    <header class = "bg-gray-600 flex items-center justify-center space-x-80 sm:w-[1200px] sm:space-x-52 lg:w-[1500px] lg:space-x-96 2xl:w-[2500px] 2xl:space-x-[500px] 2xl:justify-center">
+        <div class="logo hover:cursor-pointer relative sm:right-[100px] 2xl:right-[300px]">
             <svg width="100" height="104" viewBox="0 0 155 104" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_20_58)">
             <path d="M141.833 15.0105L93.4193 30.8169L52.9222 0L53.0149 41.0398L0 68.3092L61.4694 46.759L131.944 23.7466L104.125 102.815L155 104L124.967 62.954L141.833 15.0105Z" fill="white"/>
@@ -28,8 +23,8 @@
             </defs>
             </svg>
         </div>
-        <div class="searchBox">
-            <input type="text" class = "search" id="search-input" placeholder="Search">
+        <div class="searchBox relative sm:right-[100px] 2xl:right-[300px]">
+            <input type="text" class = "search bg-transparent text-center border-b 2xl:w-[400px]" id="search-input" placeholder="Search">
             <button id="search-btn">
                 <svg width="29" height="20" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg" >
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3269 23.6537C13.1064 26.3752 6.52489 25.0948 2.74421 20.3032C-1.5328 14.8827 -0.60575 7.0212 4.81483 2.74419C10.2354 -1.53282 18.0969 -0.605772 22.3739 4.81481C26.1546 9.60643 25.8689 16.3053 22.0075 20.7497L30.8557 31.9637C31.6577 32.98 31.4838 34.454 30.4675 35.256C29.4511 36.0579 27.9771 35.8841 27.1752 34.8677L18.3269 23.6537ZM17.8675 19.3193C14.1414 22.2456 8.74768 21.6048 5.81136 17.8834C2.87091 14.1568 3.50826 8.752 7.23491 5.81156C10.9616 2.87111 16.3663 3.50846 19.3068 7.23511C22.2431 10.9565 21.6116 16.3514 17.8989 19.2946C17.8936 19.2986 17.8884 19.3027 17.8831 19.3069C17.8779 19.311 17.8727 19.3151 17.8675 19.3193Z" fill="#ADADAD"/>
@@ -39,9 +34,9 @@
     
             
         </div>
-        <div class="nav">
-            <ul>
-                <li class="settings">
+        <div class="space-x-4 relative sm:right-[125px] md:-left-[250px] lg:right-[200px] 2xl:relative 2xl:-left-[250px] xl:right-[250px]">
+            <ul class="flex space-x-1">
+                <li class="settings cursor-pointer">
                     <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	                viewBox="0 0 489.802 489.802" xml:space="preserve">
                         <g>
@@ -58,7 +53,7 @@
                         </g>
                     </svg>
                 </li>
-                <li class="logout">
+                <li class="logout cursor-pointer">
                     <svg fill="#FFFFFF" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0 0 384.971 384.971" xml:space="preserve">
                             <g>
@@ -89,7 +84,7 @@
         </div>
     </header>
 
-    <div class="logo-bg">
+    <div class="logo-bg fixed left-[400px] sm:fixed sm:left-[200px] 2xl:left-[1100px]">
             <svg width="900" height="900" viewBox="0 0 155 125" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-pic">
             <g clip-path="url(#clip0_20_58)">
             <path d="M141.833 15.0105L93.4193 30.8169L52.9222 0L53.0149 41.0398L0 68.3092L61.4694 46.759L131.944 23.7466L104.125 102.815L155 104L124.967 62.954L141.833 15.0105Z" fill="#BAC8DC"/>
@@ -108,13 +103,8 @@
         {{{body}}}
     </main>
 
-    {{!-- Bootstrap handler --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
-    
     <script src="/js/main.js"></script>
+    <script src="/js/product.js"></script>
     
 </body>
 

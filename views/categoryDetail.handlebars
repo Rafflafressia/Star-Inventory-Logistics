@@ -1,0 +1,24 @@
+<section>
+<div class="sideBar relative m-5 border-r-2 h-screen">    
+    <div class="my-6 w-56">
+    {{#each allCategories as |category|}}
+        <div class="category-btn p-3 text-right text-lg border-b-2 cursor-pointer hover:bg-blue-100 hover:text-red-400 hover:font-bold rounded-l-xl" data-id="{{category_id}}">
+          {{category_name}}
+        </div>
+     {{/each}}
+    </div>
+ </div>
+
+<div class="products w-full">
+  <div class="flex flex-wrap flex-col w-[920px] ">
+  {{#each categories.products as |product|}}
+    <div class="card-click flex border-b-2 p-2 bg-gray-400 hover:bg-gray-500 space-x-[400px] cursor-pointer bg-opacity-90" data-id="{{product_id}}">
+      <h6 class="cardName card-click text-m font-bold text-white cursor-pointer" data-id="{{product_id}}">{{product.product_name}}</h6>
+    </div>
+  {{/each}}
+</div>
+</div>   
+
+</section>
+
+<script src="/js/product.js"></script>

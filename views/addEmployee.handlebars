@@ -1,73 +1,67 @@
-<div class="container-fluid mt-4 add-employee-container">
-    <div class="col-sm-8">
-      <div class="d-flex justify-content-center employee-form">
-        <form class="add-empoloyee-form">
-          <div class="row">
-            <div class="col-6 ">
-              <div>
-                <label for="firstname">Employee First Name</label> <br>
-                <input class="e-input mb-3 mt-1" type="text" id="firstname">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div>
-                <label for="lastname">Employee Last Name</label> <br>
-                <input class="e-input mb-3 mt-1" type="text" id="lastname">
-              </div>
-            </div>
-          </div>
+<section>
+  <form class="add-empoloyee-form m-auto px-28 bg-gray-500">
+    <div class="grid grid-cols-2 m-3">
+      {{!-- Employee First Name --}}
+      <div class="m-3">
+        <label for="firstname">Employee First Name</label>
+        <br />
+        <input class="e-input mb-3 mt-1" type="text" id="firstname" />
+      </div>
+  
+      {{!-- Employee Last Name --}} 
+      <div class="m-3">
+        <label for="lastname">Employee Last Name</label>
+        <br />
+        <input class="e-input mb-3 mt-1" type="text" id="lastname" />
+      </div>
+                          
+      {{!-- Employee User Name --}}
+      <div class="m-3">
+        <label for="username">Employee User Name</label>
+        <br />
+        <input class="e-input mt-2" type="text" id="username" />
+      </div>
+                  
+      {{!-- Employee Password --}}
+      <div class="m-3">
+        <label for="password">Employee Password</label>
+        <br />
+        <input class="e-input mt-2 mb-3" type="text" id="password" />
+      </div>
 
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <label for="username">Employee User Name</label> <br>
-                <input class="e-input mt-2" type="text" id="username">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div>
-                <label for="password">Employee Password</label> <br>
-                <input class="e-input mt-2 mb-3 " type="text" id="password">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div>
-                <label for="position">Position</label> <br>
-                <input class="e-input mt-1" type="text" id="position">
-              </div>
-            </div>
-          </div>
-          
-          <div class="d-flex justify-content-end mt-lg-5">
-            <button class="btn btn-primary mt-sm-4 me-lg-5 justify-content-end add-employee-button"  type="submit">Add Employee</button>
-          </div>
-        </form>
+      {{!-- Employee Position --}}
+      <div class="m-3">
+        <label for="position">Position</label>
+        <br />
+        <input class="e-input mt-1" type="text" id="position" />
       </div>
     </div>
-  </div>
-</div>
 
+    {{! Submit Button }}
+    <div class="mx-auto">
+      <button class="bg-blue-500 text-white p-2 m-4 rounded-lg drop-shadow hover:bg-blue-600"
+        class="add-employee-button"
+        type="submit"
+      >Add Employee</button>
+    </div>
+  </form>
 
-<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+  <div
+    class="modal-window top-[100px] rounded-2xl"
+    id="employee-modal-title"
+  >
+    <div class="modal-content flex flex-col justify-center items-center bg-blue-900  text-white z-50 w-[400px] h-[200px] p-4 rounded-2xl">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h2
+          class="modal-title m-4 text-center text-2xl font-bold"
+          id="exampleModalToggleLabel"
+        >Modal 1</h2>
       </div>
-      <div class="modal-body">
+      <span class="modal-body py-2 text-center">
         Show a second modal and hide this one with the button below.
-      </div>
+      </span>
     </div>
   </div>
-</div>
-
-<a class="btn btn-primary pop-up hidden" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Create Successfully</a>
-
-
-
+</section>
 
 <script src="/js/addEmployee.js"></script>
-
